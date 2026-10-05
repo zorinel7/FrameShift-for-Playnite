@@ -1,0 +1,65 @@
+<playnite:PluginUserControl x:Class="FrameShift.FrameShiftControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:playnite="clr-namespace:Playnite.SDK.Controls;assembly=Playnite.SDK"
+    xmlns:local="clr-namespace:FrameShift"
+    Focusable="True"
+    FocusVisualStyle="{x:Null}"
+    Background="Transparent">
+
+    <playnite:PluginUserControl.Resources>
+        <Style x:Key="FpsButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource DefaultBorderBrush}" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="FontFamily" Value="{DynamicResource FontDefaultLight}" />
+            <Setter Property="FontSize" Value="36" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="BorderStandard" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="39">
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="10" Direction="315" Opacity="0.5" ShadowDepth="5" Color="Black" />
+                                </Border.Effect>
+                            </Border>
+                            <Border x:Name="BorderFocus" Margin="-10" Background="#00000000" BorderBrush="{DynamicResource PrimaryBrush}" BorderThickness="4" CornerRadius="50" Visibility="Hidden">
+                                <Border Margin="4" Background="{DynamicResource TextBrush}" CornerRadius="42" />
+                            </Border>
+                            <ContentPresenter Margin="18,3,18,8" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.5" />
+                                <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="BorderFocus" Property="Visibility" Value="Visible" />
+                                <Setter TargetName="BorderStandard" Property="Visibility" Value="Hidden" />
+                                <Setter Property="Foreground" Value="{DynamicResource MainBackgourndBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BorderFocus" Property="Visibility" Value="Visible" />
+                                <Setter TargetName="BorderStandard" Property="Visibility" Value="Hidden" />
+                                <Setter Property="Foreground" Value="{DynamicResource MainBackgourndBrush}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FpsChoiceStyle" TargetType="local:FrameGamepadButton" BasedOn="{StaticResource FpsButtonStyle}">
+            <Setter Property="Width" Value="380" />
+            <Setter Property="Height" Value="66" />
+            <Setter Property="Margin" Value="0,5,0,5" />
+            <Setter Property="FontSize" Value="32" />
+        </Style>
+    </playnite:PluginUserControl.Resources>
+
+    <local:FrameGamepadButton x:Name="FpsButton" Width="220" Height="78" Style="{StaticResource FpsButtonStyle}" Click="FpsButton_Click" Focusable="True" Content="FrameShift" />
+</playnite:PluginUserControl>
