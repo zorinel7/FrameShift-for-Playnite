@@ -1,0 +1,15 @@
+# Visual Studio / MSBuild
+.vs/
+*.user
+*.suo
+bin/
+obj/
+
+# Build artifacts
+**/bin/
+**/obj/
+*.pdb
+
+# OS
+Thumbs.db
+Desktop.ini
