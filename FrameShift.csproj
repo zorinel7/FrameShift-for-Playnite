@@ -1,0 +1,45 @@
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B8A2A8E-1B3D-4A5B-9A1A-7E3A8E7F4C21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FrameShift</RootNamespace>
+    <AssemblyName>FrameShift</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>7.3</LangVersion>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">bin\Release\</OutputPath>
+    <OutputPath Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Playnite.SDK">
+      <HintPath>Playnite.SDK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrameShiftPlugin\Source\FrameShiftPlugin.cs" />
+    <Compile Include="FrameShiftPlugin\Source\FrameGamepadButton.cs" />
+    <Compile Include="FrameShiftPlugin\Source\FrameShiftControl.xaml.cs">
+      <DependentUpon>FrameShiftControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FrameShiftPlugin\Source\FrameShiftControl.xaml" />
+  </ItemGroup>
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="FrameShiftPlugin\extension.yaml" DestinationFolder="$(TargetDir)" />
+    <Copy SourceFiles="FrameShiftPlugin\INSTALL.md" DestinationFolder="$(TargetDir)" />
+  </Target>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
