@@ -1,99 +1,88 @@
 # FrameShift for Playnite
 
-**Kontrolerowy menedżer limitów FPS dla gier w Playnite, wykorzystujący RivaTuner Statistics Server (RTSS).**
+**Per-game FPS limiter for Playnite using RivaTuner Statistics Server (RTSS).**
 
-> ## ⚠️ WYMAGANY MOTYW TOGGLE
-> Aby korzystać z FrameShift w **Playnite Fullscreen**, potrzebny jest przygotowany przeze mnie motyw **Toggle – Zorinel / FrameShift Fork**.
+> ## ⚠️ TOGGLE THEME REQUIRED FOR FULLSCREEN
+> To use FrameShift in **Playnite Fullscreen**, you must install my **Toggle – Zorinel / FrameShift Fork** theme.
 >
-> Motyw Toggle odpowiada za wyświetlanie przycisku FrameShift w widoku szczegółów gry. **FrameShift i motyw Toggle muszą być zainstalowane razem**, jeżeli chcesz korzystać z funkcji w Fullscreen.
+> Toggle provides the FrameShift button in the game details view. **FrameShift and the Toggle theme must be installed together** for the Fullscreen integration to work.
 >
-> Motyw zachowuje oryginalny wygląd i działanie Toggle, a integracja została dostosowana do FrameShift.
+> The original Toggle appearance and behavior are preserved. The fork only adds the FrameShift integration and localization support.
 
-## 🎮 Funkcje
+## 🎮 Features
 
 - **30 / 40 / 60 / 120 FPS / OFF**
-- osobny limit FPS dla każdej gry
-- profil RTSS przypisany do właściwego pliku EXE
-- automatyczne wykrywanie EXE gry
-- zapamiętywanie ustawienia FPS dla każdej gry
-- obsługa gier uruchamianych przez Steam, EA app, Epic Games, Ubisoft Connect i inne launchery
-- automatyczne pomijanie procesów launcherów jako docelowego profilu
-- FrameShift RTSS Bridge
-- obsługa języka wybranego w Playnite
+- Per-game FPS limits
+- RTSS profile assigned to the correct game executable
+- Automatic game executable detection
+- Remembers the selected FPS mode for each game
+- Supports games launched through **Steam, EA app, Epic Games, Ubisoft Connect** and other launchers
+- Ignores launcher processes when selecting the final game profile
+- Dedicated **FrameShift RTSS Bridge**
+- Controller-friendly Fullscreen integration
+- Automatic localization based on the language selected in Playnite
 
-## 🌍 Lokalizacja
+## 📦 Installation
 
-FrameShift korzysta z języka ustawionego w Playnite i automatycznie zmienia teksty dodatku po zmianie języka aplikacji.
+1. Install **RivaTuner Statistics Server (RTSS)**.
+2. Install **FrameShift** from the latest GitHub Release.
+3. Install **Toggle – Zorinel / FrameShift Fork**.
+4. Restart Playnite.
+5. Enter **Fullscreen Mode**.
+6. Open a game's details page.
+7. Select **FrameShift** and choose **30, 40, 60, 120 FPS or OFF**.
 
-Dostępne są lokalizacje:
-**af_ZA, ar_SA, bg_BG, ca_ES, cs_CZ, cy_GB, da_DK, de_DE, el_GR, en_US, eo_UY, es_ES, et_EE, fa_IR, fi_FI, fr_FR, ga_IE, gl_ES, he_IL, hr_HR, hu_HU, id_ID, it_IT, ja_JP, ko_KR, lt_LT, mr_IN, nl_NL, no_NO, pl_PL, pt_BR, pt_PT, ro_RO, ru_RU, si_LK, sk_SK, sl_SI, sr_SP, sv_SE, tr_TR, uk_UA, vi_VN, zh_CN, zh_TW.**
+> **Important:** The FrameShift button is provided by the Toggle Fullscreen theme. If Toggle is not installed, FrameShift will not appear in the Fullscreen game details view.
 
-Lokalizacja obejmuje również teksty FrameShift używane w integracji z motywem Toggle.
-
-## 🔧 Jak działa
+## 🔧 How it works
 
 ```text
 Playnite
    ↓
 FrameShift
    ↓
-wykryty EXE gry
+Game executable detection
    ↓
-profil aplikacji RTSS
+RTSS application profile
    ↓
 FramerateLimit
 ```
 
-Przykład:
+For launcher-based games, FrameShift can use the actual game process started by Playnite instead of the launcher process.
 
-```text
-Gra A → 60 FPS
-Gra B → 40 FPS
-Gra C → 120 FPS
-```
+## 📋 FPS Profiles
 
-Przy grach launcherowych FrameShift może najpierw uruchomić grę, a następnie wykorzystać rzeczywisty proces gry jako docelowy profil RTSS.
-
-## 📋 Profile
-
-| Tryb | Zastosowanie |
+| Mode | Use |
 |---|---|
-| **30 FPS** | niski pobór mocy / spokojne gry |
-| **40 FPS** | płynny tryb konsolowy |
-| **60 FPS** | standardowy limit |
-| **120 FPS** | monitory wysokiego odświeżania |
-| **OFF** | wyłączenie limitu |
+| **30 FPS** | Low-power / cinematic |
+| **40 FPS** | Console-style balanced mode |
+| **60 FPS** | Standard gaming |
+| **120 FPS** | High-refresh gaming |
+| **OFF** | Disable the FPS limit |
 
-## 🛠️ Wymagania
+## 🌍 Localization
 
-- Windows 10/11
-- Playnite **10.60**
-- RivaTuner Statistics Server (RTSS)
-- `RTSSHooks64.dll`
-- **Motyw Toggle – Zorinel / FrameShift Fork** do działania w Playnite Fullscreen
+FrameShift follows the language selected in **Playnite**. The FrameShift interface and its Toggle integration use the corresponding Playnite language automatically.
 
-## 📦 Instalacja
+Available localization codes:
 
-1. Zainstaluj **RTSS**.
-2. Zainstaluj **FrameShift** z pliku Release.
-3. Zainstaluj przygotowany **motyw Toggle – Zorinel / FrameShift Fork**.
-4. Uruchom ponownie Playnite.
-5. Przejdź do **Fullscreen** i otwórz szczegóły gry.
-6. Wybierz **FrameShift** i ustaw limit FPS.
+**af_ZA, ar_SA, bg_BG, ca_ES, cs_CZ, cy_GB, da_DK, de_DE, el_GR, en_US, eo_UY, es_ES, et_EE, fa_IR, fi_FI, fr_FR, ga_IE, gl_ES, he_IL, hr_HR, hu_HU, id_ID, it_IT, ja_JP, ko_KR, lt_LT, mr_IN, nl_NL, no_NO, pl_PL, pt_BR, pt_PT, ro_RO, ru_RU, si_LK, sk_SK, sl_SI, sr_SP, sv_SE, tr_TR, uk_UA, vi_VN, zh_CN, zh_TW.**
+
+Changing Playnite's language changes the FrameShift/Toggle localized text automatically.
 
 ## 🔌 RTSS Bridge
 
-FrameShift wykorzystuje dedykowany `FrameShiftBridge.exe` do komunikacji z RTSS i ustawiania limitu dla konkretnego procesu/aplikacji.
+FrameShift uses `FrameShiftBridge.exe` to communicate with RTSS and update the selected application's FPS limit.
 
-## 🧪 Test RTSS
+## 🧩 Toggle – Zorinel Fork
 
-```bat
-Test-RTSS-Profile.cmd Game.exe 60
-```
+**Original theme:** Toggle  
+**Fork:** Zorinel  
+**Purpose:** FrameShift integration and localization support while keeping the original Toggle appearance and core behavior unchanged.
 
-## 🖥️ Środowisko testowe
+## 🖥️ Tested Environment
 
-FrameShift był testowany na:
+FrameShift has been tested on:
 
 - **Playnite 10.60**
 - **Windows 11**
@@ -102,20 +91,10 @@ FrameShift był testowany na:
 - **32 GB DDR4**
 - **AOC CQ27G2U/BK**
 - **2560 × 1440**
-- do **144 Hz**
-
-## 🧩 Toggle – Zorinel Fork
-
-FrameShift korzysta z przygotowanej przeze mnie wersji motywu Toggle.
-
-**Oryginalny motyw:** Toggle  
-**Fork:** Zorinel  
-**Cel forka:** integracja z FrameShift oraz lokalizacja interfejsu FrameShift bez zmiany wyglądu i podstawowego działania motywu.
+- Up to **144 Hz**
 
 ## 📥 Releases
 
-Gotowe, skompilowane wersje FrameShift są publikowane w **GitHub Releases**.
+Compiled builds are distributed through **GitHub Releases**.
 
-Najnowsza wersja:
-**FrameShift v1.0.8**
-
+Current release: **FrameShift v1.0.8**
