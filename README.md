@@ -24,13 +24,13 @@
 
 ## 📦 Installation
 
-The GitHub Release currently contains **ZIP packages**, not Playnite extension packages. Extract the files manually.
-
 ### FrameShift plugin
 
+The GitHub Release provides the plugin as a **ZIP package**. Extract it manually because this release is not distributed as a `.pext` package.
+
 1. Close Playnite.
-2. Download the latest FrameShift ZIP from Releases.
-3. Extract the contents of the ZIP into:
+2. Download the latest FrameShift ZIP from **Releases**.
+3. Extract the contents into:
 
 ```
 %AppData%\Playnite\Extensions\FrameShift\
@@ -39,45 +39,27 @@ The GitHub Release currently contains **ZIP packages**, not Playnite extension p
 The folder should contain:
 
 ```
-%AppData%\Playnite\Extensions\FrameShift\
-├── FrameShift.dll
-├── FrameShiftBridge.exe
-├── extension.yaml
-└── ...
+FrameShift.dll
+FrameShiftBridge.exe
+extension.yaml
 ```
 
-There must not be an extra nested folder such as `FrameShift\FrameShift-v1.0.8\FrameShift.dll`.
+Do not leave an extra nested folder.
 
 ### Toggle Fullscreen theme
 
+The Toggle theme is available as a **Playnite `.pthm` package**.
+
 1. Download **Toggle - Zorinel / FrameShift Fork**:
    https://github.com/zorinel7/Toggle-Zorinel-FrameShift
-2. Close Playnite.
-3. Extract the ZIP.
-4. Copy the folder that contains `theme.yaml` into:
+2. Download the latest `.pthm` file from its Releases.
+3. Open the `.pthm` file with Playnite to install the theme.
+4. Start/restart Playnite.
+5. Open **Fullscreen Mode -> Settings -> Visuals -> Theme**.
+6. Select **Toggle**.
+7. Open a game's details page. The **FrameShift** button should now be visible.
 
-```
-%AppData%\Playnite\Themes\Fullscreen\
-```
-
-Example:
-
-```
-%AppData%\Playnite\Themes\Fullscreen\Toggle_28b7d2c0-105b-4632-8dca-d11348bd61d2\
-├── theme.yaml
-├── Media.xaml
-├── Constants.xaml
-├── Extensions.yaml
-├── Localization\
-└── ...
-```
-
-Do not copy the ZIP itself and do not leave an extra nested folder. `theme.yaml` must be directly inside the theme folder.
-
-5. Start Playnite.
-6. Open **Fullscreen Mode -> Settings -> Visuals -> Theme**.
-7. Select **Toggle** and restart Playnite if requested.
-8. Open a game's details page. The **FrameShift** button should now be visible.
+A ZIP/manual installation is also available in the Toggle repository if required.
 
 > **Important:** FrameShift alone does not add the visible Fullscreen button. The button is provided by the Toggle theme integration.
 
