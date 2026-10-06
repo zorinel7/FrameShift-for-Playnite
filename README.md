@@ -83,7 +83,7 @@ The repository intentionally contains **no Fullscreen theme**. FrameShift is a P
 
 ## Launcher-based games
 
-Steam, EA app, Epic Games, Ubisoft Connect and other launchers may hide the final game executable from Playnite. FrameShift first checks the Playnite Play action, then scans the installation directory, and can learn the actual process after the game starts.
+Steam, EA app, Epic Games, Ubisoft Connect and other launchers may hide the final game executable from Playnite. FrameShift first checks the Play action, then scans the installation directory, and can learn the actual process after the game starts.
 
 ## Status
 
