@@ -7,6 +7,8 @@
 >
 > Theme repository: https://github.com/zorinel7/Toggle-Zorinel-FrameShift
 >
+> The original Toggle theme was created by **Jono (jonosellier)**. This repository uses a Zorinel fork of Toggle for FrameShift integration. Original project: https://github.com/jonosellier/toggle-theme-playnite
+>
 > Toggle provides the FrameShift button in the game details view. **FrameShift and the Toggle theme must be installed together** for the Fullscreen integration to work.
 
 ## 🎮 Features
@@ -106,8 +108,10 @@ FrameShift uses `FrameShiftBridge.exe` to communicate with RTSS and update the s
 ## 🧩 Toggle - Zorinel Fork
 
 **Original theme:** Toggle  
+**Original creator:** Jono (jonosellier)  
+**Original repository:** https://github.com/jonosellier/toggle-theme-playnite  
 **Fork:** Zorinel  
-**Repository:** https://github.com/zorinel7/Toggle-Zorinel-FrameShift
+**Fork repository:** https://github.com/zorinel7/Toggle-Zorinel-FrameShift
 
 The fork preserves the original Toggle appearance and core behavior while adding FrameShift integration and localization support.
 
