@@ -67,6 +67,14 @@ A ZIP/manual installation is also available in the Toggle repository if required
 
 > **Important:** FrameShift alone does not add the visible Fullscreen button. The button is provided by the Toggle theme integration.
 
+## 🖥️ Desktop Mode
+
+FrameShift also works in **Playnite Desktop Mode** and does not require the Toggle theme there.
+
+In Desktop Mode, select a single game and open its **game context menu**. Choose **FrameShift** to open the FPS selector. You can then choose **30, 40, 60, 120 FPS or OFF** for that game.
+
+The selected FPS limit is stored for the game and applied to its RTSS profile. The same per-game settings are used in both Desktop Mode and Fullscreen Mode.
+
 ## 🔧 How it works
 
 ```
