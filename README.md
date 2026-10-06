@@ -36,6 +36,8 @@ The GitHub Release provides the plugin as a **ZIP package**. Extract it manually
 %AppData%\Playnite\Extensions\FrameShift\
 ```
 
+4. From the extracted FrameShift folder, run **`Install-FrameShift.cmd` as Administrator** (right-click -> **Run as administrator**). This installs/registers the FrameShift RTSS Bridge scheduled task. Administrator privileges are required for this step.
+
 The folder should contain:
 
 ```
