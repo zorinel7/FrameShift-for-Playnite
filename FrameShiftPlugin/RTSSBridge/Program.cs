@@ -213,7 +213,7 @@ namespace RTSSBridge
             setProfileProperty = GetDelegate<SetProfilePropertyDelegate>("SetProfileProperty");
             updateProfiles = GetDelegate<UpdateProfilesDelegate>("UpdateProfiles");
             setFlags = GetDelegate<SetFlagsDelegate>("SetFlags");
-            getFlags = GetDelegate<GetFlagsDelegate>();
+            getFlags = GetDelegate<GetFlagsDelegate>("GetFlags");
         }
 
         private static T GetDelegate<T>(string name) where T : class
