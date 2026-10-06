@@ -3,11 +3,11 @@
 **Per-game FPS limiter for Playnite using RivaTuner Statistics Server (RTSS).**
 
 > ## ⚠️ TOGGLE THEME REQUIRED FOR FULLSCREEN
-> To use FrameShift in **Playnite Fullscreen**, you must install my **Toggle – Zorinel / FrameShift Fork** theme.
+> To use FrameShift in **Playnite Fullscreen**, you must install **Toggle - Zorinel / FrameShift Fork**.
+>
+> Theme repository: https://github.com/zorinel7/Toggle-Zorinel-FrameShift
 >
 > Toggle provides the FrameShift button in the game details view. **FrameShift and the Toggle theme must be installed together** for the Fullscreen integration to work.
->
- > The original Toggle appearance and behavior are preserved. The fork only adds the FrameShift integration and localization support. [Toggle – Zorinel / FrameShift Fork](https://github.com/zorinel7/Toggle-Zorinel-FrameShift)
 
 ## 🎮 Features
 
@@ -24,19 +24,66 @@
 
 ## 📦 Installation
 
-1. Install **RivaTuner Statistics Server (RTSS)**.
-2. Install **FrameShift** from the latest GitHub Release.
-3. Install **Toggle – Zorinel / FrameShift Fork**.
-4. Restart Playnite.
-5. Enter **Fullscreen Mode**.
-6. Open a game's details page.
-7. Select **FrameShift** and choose **30, 40, 60, 120 FPS or OFF**.
+The GitHub Release currently contains **ZIP packages**, not Playnite extension packages. Extract the files manually.
 
-> **Important:** The FrameShift button is provided by the Toggle Fullscreen theme. If Toggle is not installed, FrameShift will not appear in the Fullscreen game details view.
+### FrameShift plugin
+
+1. Close Playnite.
+2. Download the latest FrameShift ZIP from Releases.
+3. Extract the contents of the ZIP into:
+
+```
+%AppData%\Playnite\Extensions\FrameShift\
+```
+
+The folder should contain:
+
+```
+%AppData%\Playnite\Extensions\FrameShift\
+├── FrameShift.dll
+├── FrameShiftBridge.exe
+├── extension.yaml
+└── ...
+```
+
+There must not be an extra nested folder such as `FrameShift\FrameShift-v1.0.8\FrameShift.dll`.
+
+### Toggle Fullscreen theme
+
+1. Download **Toggle - Zorinel / FrameShift Fork**:
+   https://github.com/zorinel7/Toggle-Zorinel-FrameShift
+2. Close Playnite.
+3. Extract the ZIP.
+4. Copy the folder that contains `theme.yaml` into:
+
+```
+%AppData%\Playnite\Themes\Fullscreen\
+```
+
+Example:
+
+```
+%AppData%\Playnite\Themes\Fullscreen\Toggle_28b7d2c0-105b-4632-8dca-d11348bd61d2\
+├── theme.yaml
+├── Media.xaml
+├── Constants.xaml
+├── Extensions.yaml
+├── Localization\
+└── ...
+```
+
+Do not copy the ZIP itself and do not leave an extra nested folder. `theme.yaml` must be directly inside the theme folder.
+
+5. Start Playnite.
+6. Open **Fullscreen Mode -> Settings -> Visuals -> Theme**.
+7. Select **Toggle** and restart Playnite if requested.
+8. Open a game's details page. The **FrameShift** button should now be visible.
+
+> **Important:** FrameShift alone does not add the visible Fullscreen button. The button is provided by the Toggle theme integration.
 
 ## 🔧 How it works
 
-```text
+```
 Playnite
    ↓
 FrameShift
@@ -68,21 +115,19 @@ Available localization codes:
 
 **af_ZA, ar_SA, bg_BG, ca_ES, cs_CZ, cy_GB, da_DK, de_DE, el_GR, en_US, eo_UY, es_ES, et_EE, fa_IR, fi_FI, fr_FR, ga_IE, gl_ES, he_IL, hr_HR, hu_HU, id_ID, it_IT, ja_JP, ko_KR, lt_LT, mr_IN, nl_NL, no_NO, pl_PL, pt_BR, pt_PT, ro_RO, ru_RU, si_LK, sk_SK, sl_SI, sr_SP, sv_SE, tr_TR, uk_UA, vi_VN, zh_CN, zh_TW.**
 
-Changing Playnite's language changes the FrameShift/Toggle localized text automatically.
-
 ## 🔌 RTSS Bridge
 
 FrameShift uses `FrameShiftBridge.exe` to communicate with RTSS and update the selected application's FPS limit.
 
-## 🧩 Toggle – Zorinel Fork
+## 🧩 Toggle - Zorinel Fork
 
 **Original theme:** Toggle  
 **Fork:** Zorinel  
-**Purpose:** FrameShift integration and localization support while keeping the original Toggle appearance and core behavior unchanged.
+**Repository:** https://github.com/zorinel7/Toggle-Zorinel-FrameShift
+
+The fork preserves the original Toggle appearance and core behavior while adding FrameShift integration and localization support.
 
 ## 🖥️ Tested Environment
-
-FrameShift has been tested on:
 
 - **Playnite 10.60**
 - **Windows 11**
@@ -90,11 +135,11 @@ FrameShift has been tested on:
 - **NVIDIA GeForce RTX 5060 Ti 16 GB**
 - **32 GB DDR4**
 - **AOC CQ27G2U/BK**
-- **2560 × 1440**
+- **2560 x 1440**
 - Up to **144 Hz**
 
 ## 📥 Releases
 
-Compiled builds are distributed through **GitHub Releases**.
+Compiled builds are distributed through GitHub Releases.
 
 Current release: **FrameShift v1.0.8**
