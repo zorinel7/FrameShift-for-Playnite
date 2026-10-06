@@ -7,7 +7,7 @@
 >
 > Toggle provides the FrameShift button in the game details view. **FrameShift and the Toggle theme must be installed together** for the Fullscreen integration to work.
 >
-> The original Toggle appearance and behavior are preserved. The fork only adds the FrameShift integration and localization support.
+ > The original Toggle appearance and behavior are preserved. The fork only adds the FrameShift integration and localization support. [Toggle – Zorinel / FrameShift Fork](https://github.com/zorinel7/Toggle-Zorinel-FrameShift)
 
 ## 🎮 Features
 
