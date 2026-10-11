@@ -138,4 +138,4 @@ The fork preserves the original Toggle appearance and core behavior while adding
 
 Compiled builds are distributed through GitHub Releases.
 
-Current release: **FrameShift v1.0.8**
+Current release: **FrameShift v1.0.0**
