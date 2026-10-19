@@ -218,9 +218,12 @@ namespace FrameShift
             if (game == null) return null;
             NormalizeSettings();
             string key = game.Id.ToString(), saved;
-            if (Settings.GameProfiles.TryGetValue(key, out saved) && IsValidProfileName(saved)) return saved;
+            // A saved launcher (e.g. gamelaunchhelper.exe from older versions) is ignored and re-resolved.
+            if (Settings.GameProfiles.TryGetValue(key, out saved) && IsValidProfileName(saved) && !IsKnownLauncher(saved)) return saved;
 
-            string resolved = TryResolveFromPlayAction(game);
+            string resolved = TryResolveFromGameConfig(game);
+            if (IsValidProfileName(resolved)) return RememberProfile(game, resolved);
+            resolved = TryResolveFromPlayAction(game);
             if (IsValidProfileName(resolved)) return RememberProfile(game, resolved);
             resolved = TryResolveFromInstallDirectory(game);
             return IsValidProfileName(resolved) ? RememberProfile(game, resolved) : null;
@@ -233,6 +236,33 @@ namespace FrameShift
             SavePluginSettings(Settings);
             logger.Info("FrameShift: RTSS profile for " + game.Name + " = " + profile);
             return profile;
+        }
+
+        // Xbox app / Microsoft Store (GDK) games start through gamelaunchhelper.exe, which is the same
+        // file in every game. The real executable is listed in MicrosoftGame.config next to it.
+        private string TryResolveFromGameConfig(Game game)
+        {
+            if (game == null || string.IsNullOrWhiteSpace(game.InstallDirectory)) return null;
+            try
+            {
+                foreach (string dir in new[] { game.InstallDirectory, Path.Combine(game.InstallDirectory, "Content") })
+                {
+                    string config = Path.Combine(dir, "MicrosoftGame.config");
+                    if (!File.Exists(config)) continue;
+                    var doc = System.Xml.Linq.XDocument.Load(config);
+                    foreach (var exe in doc.Descendants().Where(e => e.Name.LocalName == "Executable"))
+                    {
+                        string relative = (string)exe.Attribute("Name");
+                        string profile = GetProfileFromPath(relative);
+                        // Anti-cheat bootstrappers (start_protected_game.exe) are skipped; the directory
+                        // scan then finds the game binary (e.g. Binaries\WinGDK\*.exe).
+                        if (!IsValidProfileName(profile) || IsKnownLauncher(profile) || IsLikelyHelper(profile)) continue;
+                        if (File.Exists(Path.Combine(dir, relative))) return profile;
+                    }
+                }
+            }
+            catch (Exception ex) { logger.Error(ex, "FrameShift: failed to read MicrosoftGame.config."); }
+            return null;
         }
 
         private string TryResolveFromPlayAction(Game game)
@@ -317,7 +347,7 @@ namespace FrameShift
             int score = 10;
             string full = path.ToLowerInvariant();
             if (string.Equals(Path.GetDirectoryName(path), root, StringComparison.OrdinalIgnoreCase)) score += 45;
-            else if (full.Contains("\\binaries\\win64\\") || full.Contains("\\binaries\\win32\\")) score += 28;
+            else if (full.Contains("\\binaries\\win64\\") || full.Contains("\\binaries\\win32\\") || full.Contains("\\binaries\\wingdk\\")) score += 28;
             else if (full.Contains("\\bin\\")) score += 18;
             foreach (var token in tokens) if (token.Length >= 3 && normalized.Contains(token)) score += 18;
             string compactGame = NormalizeTokenString(gameName).Replace(" ", "");
@@ -325,27 +355,31 @@ namespace FrameShift
             if (lower.EndsWith("-shipping")) score += 8;
             if (lower.Contains("game")) score += 5;
             if (lower.Contains("win64")) score += 4;
+            // "Skate.exe" vs "ReSkateLauncher.exe" in the same folder: prefer the game, not its launcher.
+            if (lower.Contains("launcher")) score -= 40;
             return score;
         }
 
         private bool IsLikelyHelper(string name)
         {
             string n = (name ?? "").ToLowerInvariant();
-            string[] bad = { "unins","uninstall","setup","installer","crashreport","crashpad","unitycrashhandler","ueprereq","dxsetup","vcredist","vc_redist","easyanticheat","eac","battleye","cefsharp","updater","update","repair","redist","prereq","register","benchmark","server","dedicated" };
+            string[] bad = { "unins","uninstall","setup","installer","crashreport","crashpad","unitycrashhandler","ueprereq","dxsetup","vcredist","vc_redist","easyanticheat","eac","battleye","cefsharp","updater","update","repair","redist","prereq","register","benchmark","server","dedicated","shadercompiler","anticheat","cefsubprocess" };
             return bad.Any(x => n.Contains(x));
         }
 
         private bool IsKnownLauncher(string profile)
         {
             string n = (profile ?? "").ToLowerInvariant();
-            string[] names = { "steam.exe","steamwebhelper.exe","epicgameslauncher.exe","ealauncher.exe","eadesktop.exe","eaapp.exe","ubisoftconnect.exe","upc.exe","galaxyclient.exe","goggalaxy.exe","rockstarclientservice.exe","rockstarlauncher.exe","bethesdanetlauncher.exe","battlenet.exe","battle.net.exe","riotclientservices.exe","riotclient.exe","playnite.desktopapp.exe","playnite.fullscreenapp.exe" };
+            string[] names = { "steam.exe","steamwebhelper.exe","epicgameslauncher.exe","ealauncher.exe","eadesktop.exe","eaapp.exe","ubisoftconnect.exe","upc.exe","galaxyclient.exe","goggalaxy.exe","rockstarclientservice.exe","rockstarlauncher.exe","bethesdanetlauncher.exe","battlenet.exe","battle.net.exe","riotclientservices.exe","riotclient.exe","playnite.desktopapp.exe","playnite.fullscreenapp.exe",
+                // Game-specific launcher stubs and bootstrappers that never render the game.
+                "gamelaunchhelper.exe","start_protected_game.exe","xboxpcapp.exe","gamingservices.exe","launcher.exe","mcclauncher.exe","playrdr2.exe" };
             return names.Contains(n);
         }
 
         private bool IsIgnoredDirectory(string name)
         {
             string n = (name ?? "").ToLowerInvariant();
-            string[] dirs = { "redist","_commonredist","support","directx","dotnet","vcredist","easyanticheat","battleye","crashreportclient","__installer","installerdata","tools" };
+            string[] dirs = { "redist","_commonredist","support","directx","dotnet","vcredist","easyanticheat","battleye","crashreportclient","__installer","installerdata","tools","embeddedxvd","custominstall" };
             return dirs.Contains(n) || n.StartsWith(".staging", StringComparison.OrdinalIgnoreCase);
         }
 
@@ -383,10 +417,24 @@ namespace FrameShift
             if (args?.Game == null) return;
             int fps = GetGameFps(args.Game);
             if (fps <= 0) return;
+            string previous;
+            NormalizeSettings();
+            Settings.GameProfiles.TryGetValue(args.Game.Id.ToString(), out previous);
             string profile = GetGameRtssProfile(args.Game);
-            logger.Info(string.IsNullOrWhiteSpace(profile)
-                ? "FrameShift: no EXE profile known yet for " + args.Game.Name
-                : "FrameShift: using saved RTSS profile " + profile + " = " + fps + " FPS for " + args.Game.Name);
+            if (string.IsNullOrWhiteSpace(profile))
+            {
+                logger.Info("FrameShift: no EXE profile known yet for " + args.Game.Name);
+                return;
+            }
+            if (!string.Equals(previous, profile, StringComparison.OrdinalIgnoreCase))
+            {
+                // The EXE changed (e.g. a saved launcher was replaced): the limit lives in the RTSS
+                // profile of the old EXE, so write it to the new one before the game starts.
+                logger.Info("FrameShift: RTSS profile for " + args.Game.Name + " changed from " + (previous ?? "(none)") + " to " + profile + "; applying " + fps + " FPS.");
+                SendRtssProfileLimit(profile, fps, false);
+                return;
+            }
+            logger.Info("FrameShift: using saved RTSS profile " + profile + " = " + fps + " FPS for " + args.Game.Name);
         }
 
         public override void OnGameStarted(OnGameStartedEventArgs args)
@@ -398,8 +446,9 @@ namespace FrameShift
                 if (fps <= 0 || GetSavedProfile(args.Game) != null) return;
                 using (var process = System.Diagnostics.Process.GetProcessById(args.StartedProcessId))
                 {
-                    string profile = null;
-                    try { profile = GetProfileFromPath(process.MainModule.FileName); } catch { }
+                    // Playnite is 32-bit: Process.MainModule throws for 64-bit games, so ask Windows
+                    // for the image path instead.
+                    string profile = GetProfileFromPath(GetProcessImagePath(process.Id));
                     if (!IsValidProfileName(profile) || IsKnownLauncher(profile)) return;
                     RememberProfile(args.Game, profile);
                     SendRtssProfileLimit(profile, fps, false);
@@ -411,7 +460,28 @@ namespace FrameShift
         private string GetSavedProfile(Game game)
         {
             string profile;
-            return game != null && Settings.GameProfiles != null && Settings.GameProfiles.TryGetValue(game.Id.ToString(), out profile) && IsValidProfileName(profile) ? profile : null;
+            return game != null && Settings.GameProfiles != null && Settings.GameProfiles.TryGetValue(game.Id.ToString(), out profile) && IsValidProfileName(profile) && !IsKnownLauncher(profile) ? profile : null;
+        }
+
+        private const uint ProcessQueryLimitedInformation = 0x1000;
+        [System.Runtime.InteropServices.DllImport("kernel32.dll", SetLastError = true)]
+        private static extern IntPtr OpenProcess(uint access, bool inheritHandle, int processId);
+        [System.Runtime.InteropServices.DllImport("kernel32.dll", CharSet = System.Runtime.InteropServices.CharSet.Unicode, SetLastError = true)]
+        private static extern bool QueryFullProcessImageName(IntPtr process, int flags, System.Text.StringBuilder exeName, ref int size);
+        [System.Runtime.InteropServices.DllImport("kernel32.dll")]
+        private static extern bool CloseHandle(IntPtr handle);
+
+        private static string GetProcessImagePath(int processId)
+        {
+            IntPtr handle = OpenProcess(ProcessQueryLimitedInformation, false, processId);
+            if (handle == IntPtr.Zero) return null;
+            try
+            {
+                var buffer = new System.Text.StringBuilder(1024);
+                int size = buffer.Capacity;
+                return QueryFullProcessImageName(handle, 0, buffer, ref size) ? buffer.ToString() : null;
+            }
+            finally { CloseHandle(handle); }
         }
 
         public void SendRtssHotkey(int fps) { SendRtssLimit(fps); }

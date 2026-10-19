@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 (2026-10-19)
+
+### Fixed
+- Xbox app / Microsoft Store (GDK) games: FrameShift saved `gamelaunchhelper.exe` (the same launcher stub in every Xbox game) instead of the game EXE, so the limit did not reach the game and was shared between all Xbox games. The real executable is now read from `MicrosoftGame.config`; anti-cheat bootstrappers (`start_protected_game.exe`) fall back to the folder scan, which now also recognises `Binaries\WinGDK`.
+- Launcher stubs are no longer accepted as RTSS profiles: `gamelaunchhelper.exe`, `start_protected_game.exe`, `mcclauncher.exe` (Halo MCC → `MCC-Win64-Shipping.exe`), `PlayRDR2.exe` (→ `RDR2.exe`), `launcher.exe`; executables with "launcher" in the name are ranked below the game (Skate → `Skate.exe`).
+- Games that already saved one of these launchers are re-resolved on the next launch, and the stored FPS limit is written to the new EXE's RTSS profile before the game starts.
+- Learning the EXE from the started process works for 64-bit games (Playnite is 32-bit, `Process.MainModule` failed).
+
 ## 1.1.0 (2026-10-19)
 
 ### Changed

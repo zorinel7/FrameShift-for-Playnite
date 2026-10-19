@@ -18,8 +18,8 @@
 - RTSS profile assigned to the correct game executable
 - Automatic game executable detection
 - Remembers the selected FPS mode for each game
-- Supports games launched through **Steam, EA app, Epic Games, Ubisoft Connect** and other launchers
-- Ignores launcher processes when selecting the final game profile
+- Supports games launched through **Steam, EA app, Epic Games, Ubisoft Connect, the Xbox app (Game Pass / Microsoft Store)** and other launchers
+- Ignores launcher processes and stubs (e.g. Xbox `gamelaunchhelper.exe`, `PlayRDR2.exe`, `mcclauncher.exe`) when selecting the final game profile; Xbox games use the executable listed in `MicrosoftGame.config`
 - Dedicated **FrameShift RTSS Bridge**, installed automatically on first start (one UAC prompt, no scripts)
 - Controller-friendly Fullscreen integration (A selects, B closes the menu)
 - Automatic localization based on the language selected in Playnite (44 languages)
@@ -133,4 +133,4 @@ The fork preserves the original Toggle appearance and core behavior while adding
 
 Compiled builds are distributed through GitHub Releases.
 
-Current release: **FrameShift v1.1.0** — see [CHANGELOG.md](CHANGELOG.md).
+Current release: **FrameShift v1.1.1** — see [CHANGELOG.md](CHANGELOG.md).
