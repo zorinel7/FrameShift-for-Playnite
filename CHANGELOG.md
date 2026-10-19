@@ -1,6 +1,13 @@
 # Changelog
 
-## 1.1.1 (2026-10-19)
+## 1.1.1 (2026-10-19, package updated 2026-10-20)
+
+### Added
+- FPS limit can be set from the game menu in **any** Fullscreen theme: **⋯ → Extensions → FrameShift → 30 / 40 / 60 / 120 FPS / OFF** (the active mode is marked with ✓). The Toggle theme is now optional (it still adds the FrameShift button on the game details page).
+- Desktop mode uses the same **FrameShift** submenu in the game context menu instead of a separate window.
+
+### Changed
+- Error messages use Playnite's own dialogs, so they work with a controller in Fullscreen.
 
 ### Fixed
 - Xbox app / Microsoft Store (GDK) games: FrameShift saved `gamelaunchhelper.exe` (the same launcher stub in every Xbox game) instead of the game EXE, so the limit did not reach the game and was shared between all Xbox games. The real executable is now read from `MicrosoftGame.config`; anti-cheat bootstrappers (`start_protected_game.exe`) fall back to the folder scan, which now also recognises `Binaries\WinGDK`.

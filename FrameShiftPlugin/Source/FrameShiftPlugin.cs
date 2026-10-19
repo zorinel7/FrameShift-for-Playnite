@@ -133,60 +133,25 @@ namespace FrameShift
             else PlayniteApi.Dialogs.ShowErrorMessage(Loc.Get("BridgeRemoveFailed") + "\n\n" + error, "FrameShift");
         }
 
+        // Game menu → FrameShift → 30 / 40 / 60 / 120 FPS / OFF. Works in Desktop mode and in Fullscreen
+        // with any theme (Fullscreen lists it under the game's Extensions menu), so no custom theme is needed.
         public override IEnumerable<GameMenuItem> GetGameMenuItems(GetGameMenuItemsArgs args)
         {
             if (args.Games == null || args.Games.Count != 1) yield break;
             var game = args.Games[0];
-            yield return new GameMenuItem { Description = "FrameShift", MenuSection = "", Action = _ => ShowFpsMenu(game) };
+            int current = GetGameFps(game);
+            foreach (var fps in new[] { 30, 40, 60, 120, 0 })
+            {
+                int selected = fps;
+                string label = fps > 0 ? fps + " FPS" : (current == 0 ? Loc.Get("Off") : Loc.Get("OffDisable"));
+                if (fps == current) label = "✓  " + label + "  —  " + Loc.Get("Active");
+                yield return new GameMenuItem { Description = label, MenuSection = "FrameShift", Action = _ => ApplyFps(game, selected) };
+            }
         }
 
-        private void ShowFpsMenu(Game game)
+        private void ApplyFps(Game game, int fps)
         {
-            var menu = new Window
-            {
-                Title = "FrameShift — " + game.Name,
-                Width = 420, SizeToContent = SizeToContent.Height,
-                WindowStartupLocation = WindowStartupLocation.CenterOwner,
-                ResizeMode = ResizeMode.NoResize,
-                Background = Brushes.White, Foreground = Brushes.Black, FlowDirection = Loc.FlowDirection
-            };
-            var current = GetGameFps(game);
-            var panel = new StackPanel { Margin = new Thickness(22) };
-            panel.Children.Add(new TextBlock { Text = "FrameShift", FontSize = 22, FontWeight = FontWeights.Bold, Foreground = Brushes.Black, Margin = new Thickness(0,0,0,4) });
-            panel.Children.Add(new TextBlock
-            {
-                Text = current > 0 ? Loc.Format("CurrentMode", current) : Loc.Get("CurrentModeOff"), TextWrapping = TextWrapping.Wrap,
-                FontSize = 16, FontWeight = FontWeights.SemiBold, Foreground = Brushes.DimGray, Margin = new Thickness(0,0,0,18)
-            });
-
-            foreach (var fps in new[] { 30, 40, 60, 120 })
-            {
-                var selected = fps == current;
-                var b = new Button
-                {
-                    Content = selected ? "✓  " + fps + " FPS  —  " + Loc.Get("Active") : fps + " FPS",
-                    FontSize = 16, FontWeight = selected ? FontWeights.Bold : FontWeights.Normal,
-                    Height = 42, Margin = new Thickness(0,3,0,3),
-                    Background = selected ? Brushes.LightGreen : Brushes.WhiteSmoke,
-                    Foreground = Brushes.Black, BorderBrush = Brushes.Gray, BorderThickness = new Thickness(1)
-                };
-                var selectedFps = fps;
-                b.Click += (s,e) => { if (SetRtssProfileForGame(game, selectedFps, true)) { SetGameFps(game, selectedFps); menu.Close(); } };
-                panel.Children.Add(b);
-            }
-
-            var off = new Button
-            {
-                Content = current == 0 ? "✓  " + Loc.Get("Off") + "  —  " + Loc.Get("Active") : Loc.Get("OffDisable"),
-                FontSize = 14, FontWeight = current == 0 ? FontWeights.Bold : FontWeights.Normal,
-                Height = 38, Margin = new Thickness(0,12,0,0),
-                Background = current == 0 ? Brushes.LightGreen : Brushes.WhiteSmoke,
-                Foreground = Brushes.Black, BorderBrush = Brushes.Gray, BorderThickness = new Thickness(1)
-            };
-            off.Click += (s,e) => { if (SetRtssProfileForGame(game, 0, true)) { SetGameFps(game, 0); menu.Close(); } };
-            panel.Children.Add(off);
-            menu.Content = panel;
-            menu.ShowDialog();
+            if (SetRtssProfileForGame(game, fps, true)) SetGameFps(game, fps);
         }
 
         public Game GetCurrentGame(Game contextGame)
@@ -498,7 +463,7 @@ namespace FrameShift
             catch (Exception ex)
             {
                 logger.Error(ex, "FrameShift: RTSS bridge error.");
-                MessageBox.Show(Loc.Get("ErrorGlobal") + "\n\n" + ex.Message, "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
+                PlayniteApi.Dialogs.ShowErrorMessage(Loc.Get("ErrorGlobal") + "\n\n" + ex.Message, "FrameShift");
             }
         }
 
@@ -508,7 +473,7 @@ namespace FrameShift
             string profile = GetGameRtssProfile(game);
             if (string.IsNullOrWhiteSpace(profile))
             {
-                if (showError) MessageBox.Show(Loc.Get("ErrorNoExe") + "\n\n" + Loc.Get("ErrorNoExeHint"), "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
+                if (showError) PlayniteApi.Dialogs.ShowErrorMessage(Loc.Get("ErrorNoExe") + "\n\n" + Loc.Get("ErrorNoExeHint"), "FrameShift");
                 return false;
             }
             return SendRtssProfileLimit(profile, fps, showError);
@@ -528,7 +493,7 @@ namespace FrameShift
             catch (Exception ex)
             {
                 logger.Error(ex, "FrameShift: RTSS profile update failed.");
-                if (showError) MessageBox.Show(Loc.Get("ErrorRtssSave") + " " + profile + "\n\n" + ex.Message + "\n\n" + Loc.Format("ErrorReinstallHint", Loc.Get("MenuReinstallBridge")), "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
+                if (showError) PlayniteApi.Dialogs.ShowErrorMessage(Loc.Get("ErrorRtssSave") + " " + profile + "\n\n" + ex.Message + "\n\n" + Loc.Format("ErrorReinstallHint", Loc.Get("MenuReinstallBridge")), "FrameShift");
                 return false;
             }
         }

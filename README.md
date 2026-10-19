@@ -2,14 +2,16 @@
 
 **Per-game FPS limiter for Playnite using RivaTuner Statistics Server (RTSS).**
 
-> ## ⚠️ TOGGLE THEME REQUIRED FOR FULLSCREEN
-> To use FrameShift in **Playnite Fullscreen**, you must install **Toggle - Zorinel / FrameShift Fork**.
+> ## 🎮 Works with any Fullscreen theme
+> In **Playnite Fullscreen** you can set the limit with any theme: open a game, press the **⋯ (options)** button → **Extensions** → **FrameShift** → choose **30 / 40 / 60 / 120 FPS / OFF**.
+>
+> For a dedicated **FrameShift button** on the game details page, install **Toggle - Zorinel / FrameShift Fork** (optional).
 >
 > Theme repository: https://github.com/zorinel7/Toggle-Zorinel-FrameShift
 >
 > The original Toggle theme was created by **Jono (jonosellier)**. This repository uses a Zorinel fork of Toggle for FrameShift integration. Original project: https://github.com/jonosellier/toggle-theme-playnite
 >
-> Toggle provides the FrameShift button in the game details view. **FrameShift and the Toggle theme must be installed together** for the Fullscreen integration to work.
+> Toggle adds the FrameShift button to the game details view.
 
 ## 🎮 Features
 
@@ -60,13 +62,15 @@ The Toggle theme is available as a **Playnite `.pthm` package**.
 
 A ZIP/manual installation is also available in the Toggle repository if required.
 
-> **Important:** FrameShift alone does not add the visible Fullscreen button. The button is provided by the Toggle theme integration.
+> FrameShift alone does not add a button to the game details page; that button comes from the Toggle theme. Without Toggle, use the game menu: **⋯ → Extensions → FrameShift**.
 
 ## 🖥️ Desktop Mode
 
 FrameShift also works in **Playnite Desktop Mode** and does not require the Toggle theme there.
 
-In Desktop Mode, select a single game and open its **game context menu**. Choose **FrameShift** to open the FPS selector. You can then choose **30, 40, 60, 120 FPS or OFF** for that game.
+In Desktop Mode, select a single game, open its **game context menu** and choose **FrameShift** → **30, 40, 60, 120 FPS or OFF**. The active mode is marked with ✓.
+
+The same **FrameShift** submenu is available in Fullscreen Mode under the game's **⋯ → Extensions** menu, with any theme.
 
 The selected FPS limit is stored for the game and applied to its RTSS profile. The same per-game settings are used in both Desktop Mode and Fullscreen Mode.
 
