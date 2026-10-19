@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Bahasa Indonesia</sys:String>
+  <sys:String x:Key="FpsMode">Mode FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Mode saat ini: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Mode saat ini: NONAKTIF</sys:String>
+  <sys:String x:Key="Active">AKTIF</sys:String>
+  <sys:String x:Key="Off">NONAKTIF</sys:String>
+  <sys:String x:Key="OffDisable">NONAKTIF — nonaktifkan batas</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Game yang sedang dipilih tidak ditemukan.</sys:String>
+  <sys:String x:Key="ErrorNoExe">File EXE game ini tidak dapat ditentukan, sehingga profil RTSS tidak dapat dibuat.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Gagal menyimpan batas RTSS untuk profil:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Pastikan tugas "FrameShift RTSS Bridge" sudah terpasang.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Gagal menetapkan batas RTSS.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Jalankan Install-FrameShift.cmd sekali sebagai administrator dari folder ekstensi.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Nama profil RTSS tidak valid.</sys:String>
+  <sys:String x:Key="Game">Game</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Buka Game → Edit → Game Actions dan pastikan Play action menunjuk ke file EXE.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe tidak ada di folder ekstensi Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge mengembalikan kesalahan:</sys:String>
+  <sys:String x:Key="InvalidFps">Nilai FPS tidak valid.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Instal ulang jembatan RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Hapus jembatan RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift perlu memasang jembatan RTSS-nya (sekali per versi).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows akan meminta izin administrator.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Gagal memasang jembatan RTSS FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Jembatan yang terpasang tidak dapat diverifikasi.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Jembatan RTSS FrameShift telah dihapus.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Gagal menghapus jembatan RTSS FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Izin administrator tidak diberikan.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Jembatan tidak selesai dengan benar (kode: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Jika masalah berlanjut, gunakan "{0}" di menu FrameShift.</sys:String>
+</ResourceDictionary>

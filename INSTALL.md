@@ -2,18 +2,20 @@
 
 ## Requirements
 
-- Windows
-- Playnite 10.60
-- RivaTuner Statistics Server
-- `RTSSHooks64.dll`
+- Windows (64-bit)
+- Playnite 10
+- RivaTuner Statistics Server (provides `RTSSHooks64.dll`)
+- A Windows account with administrator rights (needed once, for the bridge)
 
 ## Install the plugin
 
-1. Close Playnite.
-2. Open the Playnite extensions directory: `%AppData%\Playnite\Extensions\FrameShift\`
-3. Copy `FrameShift.dll`, `FrameShiftBridge.exe` and `extension.yaml` into it.
-4. Run `Install-FrameShift.cmd` as Administrator.
-5. Start Playnite again.
+1. Open `FrameShift_<version>.pext` with Playnite and confirm the installation.
+2. Restart Playnite.
+3. Confirm the FrameShift prompt to install the RTSS bridge and accept the UAC prompt.
+
+The bridge is installed to `%ProgramFiles%\FrameShift\FrameShiftBridge.exe` and started through the `FrameShift RTSS Bridge` scheduled task. If the bridge is missing or outdated, FrameShift asks again the next time you change an FPS limit.
+
+Repair: **Main menu → Extensions → FrameShift → Reinstall RTSS bridge**.
 
 ## Configure FPS
 
@@ -31,14 +33,17 @@ The selected value is written to the RTSS profile for the game's executable.
 
 If Playnite cannot determine the final executable, start the game once. FrameShift can learn the actual process and save its executable name for future launches.
 
+## Uninstall
+
+1. **Main menu → Extensions → FrameShift → Remove RTSS bridge** (removes the scheduled task and `%ProgramFiles%\FrameShift`).
+2. Uninstall the add-on in Playnite.
+
 ## Troubleshooting
 
-Test an RTSS profile manually:
+Test an RTSS profile manually from an Administrator command prompt in the extension folder:
 
 ```bat
 Test-RTSS-Profile.cmd Game.exe 60
 ```
 
-If the bridge task is missing, run `Install-FrameShift.cmd` again as Administrator.
-
-To remove the scheduled task, run `Uninstall-FrameShift.cmd`.
+`Install-FrameShift.cmd` / `Uninstall-FrameShift.cmd` (run as Administrator) do the same as the menu items.

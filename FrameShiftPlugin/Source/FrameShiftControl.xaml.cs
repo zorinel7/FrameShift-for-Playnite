@@ -111,8 +111,10 @@ namespace FrameShift
             this.game = game;
             originalFps = current;
 
-            Width = 500;
-            Height = 520;
+            // Size to the content: a fixed height clipped the last option (OFF) and its focus ring,
+            // especially with longer translations.
+            SizeToContent = SizeToContent.WidthAndHeight;
+            MinWidth = 500;
             ResizeMode = ResizeMode.NoResize;
             WindowStyle = WindowStyle.None;
             AllowsTransparency = true;
@@ -120,6 +122,7 @@ namespace FrameShift
             ShowInTaskbar = false;
             WindowStartupLocation = owner == null ? WindowStartupLocation.CenterScreen : WindowStartupLocation.CenterOwner;
             Focusable = true;
+            FlowDirection = Loc.FlowDirection;
 
             CopyThemeResources();
 
@@ -163,7 +166,7 @@ namespace FrameShift
                 var fps = options[i];
                 var button = new FrameGamepadButton
                 {
-                    Content = fps > 0 ? fps + " FPS" : "OFF",
+                    Content = fps > 0 ? fps + " FPS" : Loc.Get("Off"),
                     Style = ownerControl.FindResource("FpsChoiceStyle") as Style,
                     Tag = fps
                 };
@@ -173,10 +176,21 @@ namespace FrameShift
             }
 
             root.Child = panel;
-            Content = root;
+            // Transparent margin keeps the drop shadow inside the window.
+            Content = new Border { Padding = new Thickness(24), Background = Brushes.Transparent, Child = root };
 
             Loaded += delegate { SelectCurrent(current); Activate(); };
             PreviewKeyDown += FpsMenuWindow_PreviewKeyDown;
+            // Playnite raises controller buttons with RaiseEvent(KeyDownEvent) on the focused element,
+            // which skips the Preview (tunneling) phase, so B must be caught on the bubbling KeyDown.
+            AddHandler(KeyDownEvent, new KeyEventHandler(FpsMenuWindow_ControllerKeyDown), true);
+        }
+
+        private void FpsMenuWindow_ControllerKeyDown(object sender, KeyEventArgs e)
+        {
+            if (!FrameGamepadButton.IsPlayniteCancellation(e)) return;
+            e.Handled = true;
+            Close();
         }
 
         private void CopyThemeResources()

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Lietuvių</sys:String>
+  <sys:String x:Key="FpsMode">FPS režimas</sys:String>
+  <sys:String x:Key="CurrentMode">Dabartinis režimas: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Dabartinis režimas: IŠJUNGTA</sys:String>
+  <sys:String x:Key="Active">AKTYVU</sys:String>
+  <sys:String x:Key="Off">IŠJUNGTA</sys:String>
+  <sys:String x:Key="OffDisable">IŠJUNGTA — išjungti ribojimą</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Nepavyko rasti šiuo metu pasirinkto žaidimo.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Nepavyko nustatyti šio žaidimo EXE failo, todėl RTSS profilio sukurti negalima.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Nepavyko išsaugoti RTSS ribos profiliui:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Įsitikinkite, kad užduotis "FrameShift RTSS Bridge" yra įdiegta.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Nepavyko nustatyti RTSS ribos.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Vieną kartą paleiskite Install-FrameShift.cmd kaip administratorius iš plėtinio aplanko.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Neteisingas RTSS profilio pavadinimas.</sys:String>
+  <sys:String x:Key="Game">Žaidimas</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Atidarykite Žaidimai → Redaguoti → Žaidimo veiksmai ir įsitikinkite, kad Play action nurodo EXE failą.</sys:String>
+  <sys:String x:Key="NoBridge">Playnite plėtinio aplanke nėra FrameShiftBridge.exe.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge grąžino klaidą:</sys:String>
+  <sys:String x:Key="InvalidFps">Neteisinga FPS reikšmė.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Iš naujo įdiegti RTSS tiltą</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Pašalinti RTSS tiltą</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift turi įdiegti savo RTSS tiltą (kartą kiekvienai versijai).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows paprašys administratoriaus leidimo.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Nepavyko įdiegti FrameShift RTSS tilto.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Nepavyko patikrinti įdiegto tilto.</sys:String>
+  <sys:String x:Key="BridgeRemoved">FrameShift RTSS tiltas pašalintas.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Nepavyko pašalinti FrameShift RTSS tilto.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Administratoriaus leidimas nesuteiktas.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Tiltas nebaigė darbo tinkamai (kodas: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Jei problema kartojasi, FrameShift meniu naudokite „{0}“.</sys:String>
+</ResourceDictionary>

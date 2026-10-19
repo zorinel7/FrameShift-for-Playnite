@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Gaeilge</sys:String>
+  <sys:String x:Key="FpsMode">Mód FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Mód reatha: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Mód reatha: MÚCHTA</sys:String>
+  <sys:String x:Key="Active">GNÍOMHACH</sys:String>
+  <sys:String x:Key="Off">MÚCHTA</sys:String>
+  <sys:String x:Key="OffDisable">MÚCHTA — díchumasaigh an teorainn</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Níorbh fhéidir an cluiche roghnaithe faoi láthair a aimsiú.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Níorbh fhéidir comhad EXE an chluiche seo a chinneadh, mar sin ní féidir próifíl RTSS a chruthú.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Níorbh fhéidir teorainn RTSS a shábháil don phróifíl:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Cinntigh go bhfuil an tasc "FrameShift RTSS Bridge" suiteáilte.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Níorbh fhéidir teorainn RTSS a shocrú.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Rith Install-FrameShift.cmd uair amháin mar riarthóir ó fhillteán an bhreiseáin.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Ainm próifíle RTSS neamhbhailí.</sys:String>
+  <sys:String x:Key="Game">Cluiche</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Oscail Cluichí → Cuir in Eagar → Gníomhartha cluiche agus cinntigh go díríonn Play action ar an gcomhad EXE.</sys:String>
+  <sys:String x:Key="NoBridge">Tá FrameShiftBridge.exe ar iarraidh ó fhillteán breiseáin Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">D’aischuir RTSSBridge earráid:</sys:String>
+  <sys:String x:Key="InvalidFps">Luach FPS neamhbhailí.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Athshuiteáil droichead RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Bain droichead RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">Caithfidh FrameShift a dhroichead RTSS a shuiteáil (uair amháin in aghaidh an leagain).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Iarrfaidh Windows cead riarthóra.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Níorbh fhéidir droichead RTSS FrameShift a shuiteáil.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Níorbh fhéidir an droichead suiteáilte a fhíorú.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Baineadh droichead RTSS FrameShift.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Níorbh fhéidir droichead RTSS FrameShift a bhaint.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Níor tugadh cead riarthóra.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Níor chríochnaigh an droichead i gceart (cód: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Má leanann an fhadhb ar aghaidh, úsáid "{0}" i roghchlár FrameShift.</sys:String>
+</ResourceDictionary>

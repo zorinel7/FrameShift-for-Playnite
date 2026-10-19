@@ -32,4 +32,4 @@ UpdateProfiles
 
 The main property is `FramerateLimit`, with `FramerateLimitDenominator=1`.
 
-No custom Fullscreen theme is required.
+Desktop Mode works without a custom theme (game context menu → FrameShift). In Fullscreen the FrameShift button is provided by the Toggle – Zorinel / FrameShift fork theme: https://github.com/zorinel7/Toggle-Zorinel-FrameShift

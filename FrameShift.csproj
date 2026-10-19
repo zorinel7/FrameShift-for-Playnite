@@ -33,10 +33,16 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FrameShiftPlugin\Source\FrameShiftPlugin.cs" />
     <Compile Include="FrameShiftPlugin\Source\FrameGamepadButton.cs" />
+    <Compile Include="FrameShiftPlugin\Source\BridgeSetup.cs" />
+    <Compile Include="FrameShiftPlugin\Source\Localization.cs" />
+    <EmbeddedResource Include="FrameShiftPlugin\Localization\*.xaml">
+      <LogicalName>FrameShift.Localization.%(Filename).xaml</LogicalName>
+    </EmbeddedResource>
     <Compile Include="FrameShiftPlugin\Source\FrameShiftControl.xaml.cs">
       <DependentUpon>FrameShiftControl.xaml</DependentUpon>
     </Compile>
@@ -49,6 +55,7 @@
   <!-- Must come after the Microsoft.CSharp.targets import, otherwise the empty default AfterBuild overrides it. -->
   <Target Name="AfterBuild">
     <Copy SourceFiles="FrameShiftPlugin\extension.yaml" DestinationFolder="$(TargetDir)" />
+    <Copy SourceFiles="FrameShiftPlugin\icon.png" DestinationFolder="$(TargetDir)" />
     <Copy SourceFiles="FrameShiftPlugin\INSTALL.md" DestinationFolder="$(TargetDir)" />
   </Target>
 </Project>

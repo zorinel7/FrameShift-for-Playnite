@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Українська</sys:String>
+  <sys:String x:Key="FpsMode">Режим FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Поточний режим: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Поточний режим: ВИМК.</sys:String>
+  <sys:String x:Key="Active">АКТИВНО</sys:String>
+  <sys:String x:Key="Off">ВИМК.</sys:String>
+  <sys:String x:Key="OffDisable">ВИМК. — вимкнути обмеження</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Не вдалося знайти поточну вибрану гру.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Не вдалося визначити EXE-файл цієї гри, тому профіль RTSS неможливо створити.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Не вдалося зберегти обмеження RTSS для профілю:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Переконайтеся, що завдання "FrameShift RTSS Bridge" встановлено.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Не вдалося встановити обмеження RTSS.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Один раз запустіть Install-FrameShift.cmd від імені адміністратора з папки розширення.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Неприпустима назва профілю RTSS.</sys:String>
+  <sys:String x:Key="Game">Гра</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Відкрийте Ігри → Редагувати → Дії гри та переконайтеся, що Play action вказує на EXE-файл.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe відсутній у папці розширення Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge повернув помилку:</sys:String>
+  <sys:String x:Key="InvalidFps">Неприпустиме значення FPS.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Перевстановити міст RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Видалити міст RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift потрібно встановити міст RTSS (один раз для кожної версії).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows запитає дозвіл адміністратора.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Не вдалося встановити міст RTSS FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Не вдалося перевірити встановлений міст.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Міст RTSS FrameShift видалено.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Не вдалося видалити міст RTSS FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Дозвіл адміністратора не надано.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Міст завершився некоректно (код: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Якщо проблема повторюється, скористайтеся «{0}» у меню FrameShift.</sys:String>
+</ResourceDictionary>

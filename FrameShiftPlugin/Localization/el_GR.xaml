@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Ελληνικά</sys:String>
+  <sys:String x:Key="FpsMode">Λειτουργία FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Τρέχουσα λειτουργία: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Τρέχουσα λειτουργία: ΑΠΕΝΕΡΓΟ</sys:String>
+  <sys:String x:Key="Active">ΕΝΕΡΓΟ</sys:String>
+  <sys:String x:Key="Off">ΑΠΕΝΕΡΓΟ</sys:String>
+  <sys:String x:Key="OffDisable">ΑΠΕΝΕΡΓΟ — απενεργοποίηση ορίου</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Δεν ήταν δυνατός ο εντοπισμός του τρέχοντος επιλεγμένου παιχνιδιού.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Δεν ήταν δυνατός ο προσδιορισμός του αρχείου EXE αυτού του παιχνιδιού, επομένως δεν μπορεί να δημιουργηθεί προφίλ RTSS.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Δεν ήταν δυνατή η αποθήκευση του ορίου RTSS για το προφίλ:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Βεβαιωθείτε ότι η εργασία "FrameShift RTSS Bridge" είναι εγκατεστημένη.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Δεν ήταν δυνατή η ρύθμιση του ορίου RTSS.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Εκτελέστε μία φορά το Install-FrameShift.cmd ως διαχειριστής από τον φάκελο της επέκτασης.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Μη έγκυρο όνομα προφίλ RTSS.</sys:String>
+  <sys:String x:Key="Game">Παιχνίδι</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Άνοιξε Παιχνίδια → Επεξεργασία → Ενέργειες παιχνιδιού και βεβαιώσου ότι το Play action δείχνει στο αρχείο EXE.</sys:String>
+  <sys:String x:Key="NoBridge">Το FrameShiftBridge.exe λείπει από τον φάκελο της επέκτασης του Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">Το RTSSBridge επέστρεψε σφάλμα:</sys:String>
+  <sys:String x:Key="InvalidFps">Μη έγκυρη τιμή FPS.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Επανεγκατάσταση γέφυρας RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Αφαίρεση γέφυρας RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">Το FrameShift πρέπει να εγκαταστήσει τη γέφυρα RTSS (μία φορά ανά έκδοση).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Τα Windows θα ζητήσουν άδεια διαχειριστή.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Δεν ήταν δυνατή η εγκατάσταση της γέφυρας RTSS του FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Δεν ήταν δυνατή η επαλήθευση της εγκατεστημένης γέφυρας.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Η γέφυρα RTSS του FrameShift αφαιρέθηκε.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Δεν ήταν δυνατή η αφαίρεση της γέφυρας RTSS του FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Δεν δόθηκε άδεια διαχειριστή.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Η γέφυρα δεν ολοκληρώθηκε σωστά (κωδικός: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Αν το πρόβλημα παραμένει, χρησιμοποιήστε το «{0}» στο μενού του FrameShift.</sys:String>
+</ResourceDictionary>

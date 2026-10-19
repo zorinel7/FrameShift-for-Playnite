@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">עברית</sys:String>
+  <sys:String x:Key="FpsMode">מצב FPS</sys:String>
+  <sys:String x:Key="CurrentMode">מצב נוכחי: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">מצב נוכחי: כבוי</sys:String>
+  <sys:String x:Key="Active">פעיל</sys:String>
+  <sys:String x:Key="Off">כבוי</sys:String>
+  <sys:String x:Key="OffDisable">כבוי — השבתת המגבלה</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">לא ניתן למצוא את המשחק שנבחר כעת.</sys:String>
+  <sys:String x:Key="ErrorNoExe">לא ניתן לזהות את קובץ ה‑EXE של המשחק, ולכן לא ניתן ליצור פרופיל RTSS.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">לא ניתן לשמור את מגבלת RTSS עבור הפרופיל:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">ודא שהמשימה "FrameShift RTSS Bridge" מותקנת.</sys:String>
+  <sys:String x:Key="ErrorGlobal">לא ניתן להגדיר את מגבלת RTSS.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">הפעל את Install-FrameShift.cmd פעם אחת כמנהל מערכת מתיקיית התוסף.</sys:String>
+  <sys:String x:Key="InvalidProfileName">שם פרופיל RTSS לא חוקי.</sys:String>
+  <sys:String x:Key="Game">משחק</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">פתח משחקים ← עריכה ← פעולות משחק וודא ש‑Play action מצביע על קובץ ה‑EXE.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe חסר בתיקיית התוסף של Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge החזיר שגיאה:</sys:String>
+  <sys:String x:Key="InvalidFps">ערך FPS לא חוקי.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">התקנה מחדש של גשר RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">הסרת גשר RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift צריך להתקין את גשר ה-RTSS שלו (פעם אחת לכל גרסה).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows יבקש הרשאת מנהל.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">לא ניתן להתקין את גשר ה-RTSS של FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">לא ניתן לאמת את הגשר המותקן.</sys:String>
+  <sys:String x:Key="BridgeRemoved">גשר ה-RTSS של FrameShift הוסר.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">לא ניתן להסיר את גשר ה-RTSS של FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">הרשאת מנהל לא ניתנה.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">הגשר לא הסתיים כראוי (קוד: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">אם הבעיה נמשכת, השתמשו ב"{0}" בתפריט FrameShift.</sys:String>
+</ResourceDictionary>

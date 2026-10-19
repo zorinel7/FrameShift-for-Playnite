@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Cymraeg</sys:String>
+  <sys:String x:Key="FpsMode">Modd FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Modd cyfredol: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Modd cyfredol: I FF</sys:String>
+  <sys:String x:Key="Active">GWEITHREDOL</sys:String>
+  <sys:String x:Key="Off">I FF</sys:String>
+  <sys:String x:Key="OffDisable">I FF — analluogi’r terfyn</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Ni ellir dod o hyd i’r gêm a ddewiswyd ar hyn o bryd.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Ni ellir pennu ffeil EXE y gêm hon, felly ni ellir creu proffil RTSS.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Methu cadw terfyn RTSS ar gyfer y proffil:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Sicrhewch fod y dasg "FrameShift RTSS Bridge" wedi’i gosod.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Methu gosod terfyn RTSS.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Rhedeg Install-FrameShift.cmd unwaith fel gweinyddwr o ffolder yr estyniad.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Enw proffil RTSS annilys.</sys:String>
+  <sys:String x:Key="Game">Gêm</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Agorwch Gemau → Golygu → Camau gêm a sicrhewch fod Play action yn pwyntio at y ffeil EXE.</sys:String>
+  <sys:String x:Key="NoBridge">Mae FrameShiftBridge.exe ar goll o ffolder estyniad Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">Dychwelodd RTSSBridge wall:</sys:String>
+  <sys:String x:Key="InvalidFps">Gwerth FPS annilys.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Ailosod pont RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Tynnu pont RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">Mae angen i FrameShift osod ei bont RTSS (unwaith ar gyfer pob fersiwn).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Bydd Windows yn gofyn am ganiatâd gweinyddwr.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Methu gosod pont RTSS FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Methu gwirio'r bont a osodwyd.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Mae pont RTSS FrameShift wedi'i thynnu.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Methu tynnu pont RTSS FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Ni roddwyd caniatâd gweinyddwr.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Ni orffennodd y bont yn gywir (cod: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Os bydd y broblem yn parhau, defnyddiwch "{0}" yn newislen FrameShift.</sys:String>
+</ResourceDictionary>

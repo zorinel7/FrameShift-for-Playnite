@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Eesti</sys:String>
+  <sys:String x:Key="FpsMode">FPS-režiim</sys:String>
+  <sys:String x:Key="CurrentMode">Praegune režiim: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Praegune režiim: VÄLJAS</sys:String>
+  <sys:String x:Key="Active">AKTIIVNE</sys:String>
+  <sys:String x:Key="Off">VÄLJAS</sys:String>
+  <sys:String x:Key="OffDisable">VÄLJAS — keela piirang</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Praegu valitud mängu ei leitud.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Selle mängu EXE-faili ei õnnestunud määrata, seega ei saa RTSS-i profiili luua.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">RTSS-i piirangu salvestamine profiilile ebaõnnestus:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Veendu, et ülesanne "FrameShift RTSS Bridge" on installitud.</sys:String>
+  <sys:String x:Key="ErrorGlobal">RTSS-i piirangu seadmine ebaõnnestus.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Käivita Install-FrameShift.cmd üks kord administraatorina laienduse kaustast.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Vigane RTSS-i profiili nimi.</sys:String>
+  <sys:String x:Key="Game">Mäng</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Ava Mängud → Redigeeri → Mängutoimingud ja veendu, et Play action viitab EXE-failile.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe puudub Playnite’i laienduse kaustast.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge tagastas vea:</sys:String>
+  <sys:String x:Key="InvalidFps">Vigane FPS-väärtus.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Installi RTSS-sild uuesti</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Eemalda RTSS-sild</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift peab installima oma RTSS-silla (üks kord versiooni kohta).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows küsib administraatori õigusi.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">FrameShifti RTSS-silla installimine ebaõnnestus.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Installitud silda ei õnnestunud kontrollida.</sys:String>
+  <sys:String x:Key="BridgeRemoved">FrameShifti RTSS-sild eemaldati.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">FrameShifti RTSS-silla eemaldamine ebaõnnestus.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Administraatori õigusi ei antud.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Sild ei lõpetanud korrektselt (kood: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Kui probleem püsib, kasuta FrameShifti menüüs valikut „{0}”.</sys:String>
+</ResourceDictionary>

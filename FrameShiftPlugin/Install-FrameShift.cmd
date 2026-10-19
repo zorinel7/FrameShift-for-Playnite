@@ -2,6 +2,9 @@
 setlocal EnableExtensions
 chcp 65001 >nul
 
+rem Optional: Playnite installs the bridge automatically on first start (one UAC prompt).
+rem Use this script only for manual ZIP installs or to repair the bridge.
+
 echo ========================================
 echo       FrameShift - INSTALL BRIDGE
 echo ========================================
@@ -15,29 +18,22 @@ if errorlevel 1 (
   exit /b 1
 )
 
-set "BRIDGE=%~dp0FrameShiftBridge.exe"
-if not exist "%BRIDGE%" (
-  echo ERROR: FrameShiftBridge.exe was not found:
-  echo %BRIDGE%
+if not exist "%~dp0FrameShiftBridge.exe" (
+  echo ERROR: FrameShiftBridge.exe was not found next to this script.
   pause
   exit /b 1
 )
 
-set "TASK=FrameShift RTSS Bridge"
-echo Creating scheduled task: %TASK%
-rem The plugin starts the task on demand with "schtasks /Run". schtasks has no
-rem on-demand schedule type, so ONLOGON is used; at logon the worker finds no
-rem request file and exits immediately.
-schtasks /Create /TN "%TASK%" /TR "\"%BRIDGE%\" worker" /SC ONLOGON /RL HIGHEST /F
+"%~dp0FrameShiftBridge.exe" install
 if errorlevel 1 (
   echo.
-  echo ERROR: Could not create the scheduled task.
+  echo ERROR: Bridge installation failed.
   pause
   exit /b 1
 )
 
 echo.
-echo FrameShift bridge installed successfully.
+echo FrameShift bridge installed to "%ProgramFiles%\FrameShift".
 echo.
 pause
 exit /b 0

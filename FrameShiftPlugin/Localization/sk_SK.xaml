@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Slovenčina</sys:String>
+  <sys:String x:Key="FpsMode">Režim FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Aktuálny režim: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Aktuálny režim: VYPNUTÉ</sys:String>
+  <sys:String x:Key="Active">AKTÍVNE</sys:String>
+  <sys:String x:Key="Off">VYPNUTÉ</sys:String>
+  <sys:String x:Key="OffDisable">VYPNUTÉ — vypnúť limit</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Aktuálne vybranú hru sa nepodarilo nájsť.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Nepodarilo sa určiť EXE súbor tejto hry, takže profil RTSS nemožno vytvoriť.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Limit RTSS sa pre profil nepodarilo uložiť:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Uistite sa, že úloha "FrameShift RTSS Bridge" je nainštalovaná.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Limit RTSS sa nepodarilo nastaviť.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Spustite Install-FrameShift.cmd raz ako správca z priečinka rozšírenia.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Neplatný názov profilu RTSS.</sys:String>
+  <sys:String x:Key="Game">Hra</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Otvorte Hry → Upraviť → Akcie hry a uistite sa, že Play action smeruje na EXE súbor.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe chýba v priečinku rozšírenia Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge vrátil chybu:</sys:String>
+  <sys:String x:Key="InvalidFps">Neplatná hodnota FPS.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Preinštalovať most RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Odstrániť most RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift potrebuje nainštalovať svoj most RTSS (raz pre každú verziu).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows požiada o oprávnenie správcu.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Most RTSS pre FrameShift sa nepodarilo nainštalovať.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Nainštalovaný most sa nepodarilo overiť.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Most RTSS pre FrameShift bol odstránený.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Most RTSS pre FrameShift sa nepodarilo odstrániť.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Oprávnenie správcu nebolo udelené.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Most sa neukončil správne (kód: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Ak problém pretrváva, použite v ponuke FrameShift položku „{0}“.</sys:String>
+</ResourceDictionary>

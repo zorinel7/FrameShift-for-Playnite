@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">فارسی</sys:String>
+  <sys:String x:Key="FpsMode">حالت FPS</sys:String>
+  <sys:String x:Key="CurrentMode">حالت فعلی: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">حالت فعلی: خاموش</sys:String>
+  <sys:String x:Key="Active">فعال</sys:String>
+  <sys:String x:Key="Off">خاموش</sys:String>
+  <sys:String x:Key="OffDisable">خاموش — غیرفعال کردن محدودیت</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">بازی انتخاب‌شده فعلی پیدا نشد.</sys:String>
+  <sys:String x:Key="ErrorNoExe">فایل EXE این بازی شناسایی نشد، بنابراین امکان ایجاد پروفایل RTSS وجود ندارد.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">ذخیره محدودیت RTSS برای پروفایل انجام نشد:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">مطمئن شوید وظیفه "FrameShift RTSS Bridge" نصب شده است.</sys:String>
+  <sys:String x:Key="ErrorGlobal">تنظیم محدودیت RTSS انجام نشد.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">فایل Install-FrameShift.cmd را یک‌بار با دسترسی مدیر از پوشه افزونه اجرا کنید.</sys:String>
+  <sys:String x:Key="InvalidProfileName">نام پروفایل RTSS نامعتبر است.</sys:String>
+  <sys:String x:Key="Game">بازی</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">به بازی‌ها ← ویرایش ← اقدامات بازی بروید و مطمئن شوید Play action به فایل EXE اشاره می‌کند.</sys:String>
+  <sys:String x:Key="NoBridge">فایل FrameShiftBridge.exe در پوشه افزونه Playnite وجود ندارد.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge خطا برگرداند:</sys:String>
+  <sys:String x:Key="InvalidFps">مقدار FPS نامعتبر است.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">نصب دوباره پل RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">حذف پل RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift باید پل RTSS خود را نصب کند (یک بار برای هر نسخه).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows اجازه مدیر را درخواست می‌کند.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">نصب پل RTSS برنامه FrameShift ممکن نشد.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">پل نصب‌شده قابل تأیید نبود.</sys:String>
+  <sys:String x:Key="BridgeRemoved">پل RTSS برنامه FrameShift حذف شد.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">حذف پل RTSS برنامه FrameShift ممکن نشد.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">اجازه مدیر داده نشد.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">پل به‌درستی به پایان نرسید (کد: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">اگر مشکل ادامه داشت، از «{0}» در منوی FrameShift استفاده کنید.</sys:String>
+</ResourceDictionary>

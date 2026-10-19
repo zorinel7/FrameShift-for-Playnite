@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Dansk</sys:String>
+  <sys:String x:Key="FpsMode">FPS-tilstand</sys:String>
+  <sys:String x:Key="CurrentMode">Aktuel tilstand: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Aktuel tilstand: FRA</sys:String>
+  <sys:String x:Key="Active">AKTIV</sys:String>
+  <sys:String x:Key="Off">FRA</sys:String>
+  <sys:String x:Key="OffDisable">FRA — deaktiver grænsen</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Den aktuelt valgte spil kunne ikke findes.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Spillets EXE-fil kunne ikke bestemmes, så RTSS-profilen kan ikke oprettes.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Kunne ikke gemme RTSS-grænsen for profilen:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Sørg for, at opgaven "FrameShift RTSS Bridge" er installeret.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Kunne ikke indstille RTSS-grænsen.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Kør Install-FrameShift.cmd én gang som administrator fra udvidelsens mappe.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Ugyldigt RTSS-profilnavn.</sys:String>
+  <sys:String x:Key="Game">Spil</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Åbn Spil → Rediger → Spilhandlinger, og sørg for, at Play action peger på EXE-filen.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe mangler i Playnite-udvidelsesmappen.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge returnerede en fejl:</sys:String>
+  <sys:String x:Key="InvalidFps">Ugyldig FPS-værdi.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Geninstaller RTSS-bridge</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Fjern RTSS-bridge</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift skal installere sin RTSS-bridge (én gang pr. version).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows vil bede om administratortilladelse.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">FrameShift RTSS-bridge kunne ikke installeres.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Den installerede bridge kunne ikke verificeres.</sys:String>
+  <sys:String x:Key="BridgeRemoved">FrameShift RTSS-bridge er fjernet.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">FrameShift RTSS-bridge kunne ikke fjernes.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Der blev ikke givet administratortilladelse.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Bridgen blev ikke afsluttet korrekt (kode: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Hvis problemet fortsætter, så brug "{0}" i FrameShift-menuen.</sys:String>
+</ResourceDictionary>

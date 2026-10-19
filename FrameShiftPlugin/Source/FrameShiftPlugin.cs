@@ -38,6 +38,7 @@ namespace FrameShift
         public FrameShiftPlugin(IPlayniteAPI api) : base(api)
         {
             logger = LogManager.GetLogger("FrameShift");
+            Loc.Init(api.ApplicationSettings?.Language, ex => logger.Error(ex, "FrameShift: failed to load localization."));
             Settings = LoadPluginSettings<FpsSettings>() ?? new FpsSettings();
             NormalizeSettings();
             AddCustomElementSupport(new AddCustomElementSupportArgs
@@ -65,6 +66,73 @@ namespace FrameShift
             return args.Name == ElementName ? new FrameShiftControl(this) : null;
         }
 
+        public override void OnApplicationStarted(OnApplicationStartedEventArgs args)
+        {
+            // First start after the .pext was installed or updated: install / refresh the bridge.
+            System.Threading.Tasks.Task.Run(() =>
+            {
+                try
+                {
+                    if (CheckBridge()) return;
+                    PlayniteApi.MainView.UIDispatcher.Invoke(new Action(() => EnsureBridgeInstalled()));
+                }
+                catch (Exception ex) { logger.Error(ex, "FrameShift: bridge check failed."); }
+            });
+        }
+
+        public override IEnumerable<MainMenuItem> GetMainMenuItems(GetMainMenuItemsArgs args)
+        {
+            yield return new MainMenuItem { Description = Loc.Get("MenuReinstallBridge"), MenuSection = "@FrameShift", Action = _ => ReinstallBridge() };
+            yield return new MainMenuItem { Description = Loc.Get("MenuRemoveBridge"), MenuSection = "@FrameShift", Action = _ => RemoveBridge() };
+        }
+
+        private volatile bool bridgeReady;
+        private bool bridgeDeclined;
+
+        private bool CheckBridge()
+        {
+            if (!bridgeReady) bridgeReady = BridgeSetup.IsUpToDate();
+            return bridgeReady;
+        }
+
+        /// <summary>Must run on the UI thread. Asks once per session, then shows the UAC prompt.</summary>
+        private bool EnsureBridgeInstalled(bool userAction = false)
+        {
+            if (CheckBridge()) return true;
+            if (bridgeDeclined && !userAction) return false;
+
+            var answer = PlayniteApi.Dialogs.ShowMessage(
+                Loc.Get("BridgeInstallPrompt") + "\n\n" + Loc.Get("BridgeUacNote"),
+                "FrameShift", MessageBoxButton.YesNo, MessageBoxImage.Information);
+            if (answer != MessageBoxResult.Yes) { bridgeDeclined = true; return false; }
+            return InstallBridge();
+        }
+
+        private bool InstallBridge()
+        {
+            string error = BridgeSetup.RunElevated("install");
+            bridgeReady = error == null && BridgeSetup.IsUpToDate();
+            if (bridgeReady) { logger.Info("FrameShift: bridge installed to " + BridgeSetup.InstalledBridgePath); return true; }
+
+            logger.Error("FrameShift: bridge install failed: " + (error ?? "installed bridge could not be verified."));
+            PlayniteApi.Dialogs.ShowErrorMessage(Loc.Get("BridgeInstallFailed") + "\n\n" + (error ?? Loc.Get("BridgeNotVerified")), "FrameShift");
+            return false;
+        }
+
+        private void ReinstallBridge()
+        {
+            bridgeReady = false;
+            InstallBridge();
+        }
+
+        private void RemoveBridge()
+        {
+            string error = BridgeSetup.RunElevated("uninstall");
+            bridgeReady = false;
+            if (error == null) PlayniteApi.Dialogs.ShowMessage(Loc.Get("BridgeRemoved"), "FrameShift");
+            else PlayniteApi.Dialogs.ShowErrorMessage(Loc.Get("BridgeRemoveFailed") + "\n\n" + error, "FrameShift");
+        }
+
         public override IEnumerable<GameMenuItem> GetGameMenuItems(GetGameMenuItemsArgs args)
         {
             if (args.Games == null || args.Games.Count != 1) yield break;
@@ -77,17 +145,17 @@ namespace FrameShift
             var menu = new Window
             {
                 Title = "FrameShift — " + game.Name,
-                Width = 420, Height = 340,
+                Width = 420, SizeToContent = SizeToContent.Height,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
                 ResizeMode = ResizeMode.NoResize,
-                Background = Brushes.White, Foreground = Brushes.Black
+                Background = Brushes.White, Foreground = Brushes.Black, FlowDirection = Loc.FlowDirection
             };
             var current = GetGameFps(game);
             var panel = new StackPanel { Margin = new Thickness(22) };
             panel.Children.Add(new TextBlock { Text = "FrameShift", FontSize = 22, FontWeight = FontWeights.Bold, Foreground = Brushes.Black, Margin = new Thickness(0,0,0,4) });
             panel.Children.Add(new TextBlock
             {
-                Text = current > 0 ? "Current limit: " + current + " FPS" : "Current limit: OFF",
+                Text = current > 0 ? Loc.Format("CurrentMode", current) : Loc.Get("CurrentModeOff"), TextWrapping = TextWrapping.Wrap,
                 FontSize = 16, FontWeight = FontWeights.SemiBold, Foreground = Brushes.DimGray, Margin = new Thickness(0,0,0,18)
             });
 
@@ -96,7 +164,7 @@ namespace FrameShift
                 var selected = fps == current;
                 var b = new Button
                 {
-                    Content = selected ? "✓  " + fps + " FPS  —  ACTIVE" : fps + " FPS",
+                    Content = selected ? "✓  " + fps + " FPS  —  " + Loc.Get("Active") : fps + " FPS",
                     FontSize = 16, FontWeight = selected ? FontWeights.Bold : FontWeights.Normal,
                     Height = 42, Margin = new Thickness(0,3,0,3),
                     Background = selected ? Brushes.LightGreen : Brushes.WhiteSmoke,
@@ -109,7 +177,7 @@ namespace FrameShift
 
             var off = new Button
             {
-                Content = current == 0 ? "✓  OFF  —  ACTIVE" : "OFF  —  disable limit",
+                Content = current == 0 ? "✓  " + Loc.Get("Off") + "  —  " + Loc.Get("Active") : Loc.Get("OffDisable"),
                 FontSize = 14, FontWeight = current == 0 ? FontWeights.Bold : FontWeights.Normal,
                 Height = 38, Margin = new Thickness(0,12,0,0),
                 Background = current == 0 ? Brushes.LightGreen : Brushes.WhiteSmoke,
@@ -360,16 +428,17 @@ namespace FrameShift
             catch (Exception ex)
             {
                 logger.Error(ex, "FrameShift: RTSS bridge error.");
-                MessageBox.Show("Unable to set the RTSS limit.\n\n" + ex.Message, "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(Loc.Get("ErrorGlobal") + "\n\n" + ex.Message, "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
         public bool SetRtssProfileForGame(Game game, int fps, bool showError)
         {
+            if (showError && !EnsureBridgeInstalled(userAction: true)) return false;
             string profile = GetGameRtssProfile(game);
             if (string.IsNullOrWhiteSpace(profile))
             {
-                if (showError) MessageBox.Show("FrameShift could not determine the game's EXE.\n\nCheck the game's Play action in Playnite.", "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
+                if (showError) MessageBox.Show(Loc.Get("ErrorNoExe") + "\n\n" + Loc.Get("ErrorNoExeHint"), "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return false;
             }
             return SendRtssProfileLimit(profile, fps, showError);
@@ -389,7 +458,7 @@ namespace FrameShift
             catch (Exception ex)
             {
                 logger.Error(ex, "FrameShift: RTSS profile update failed.");
-                if (showError) MessageBox.Show("Unable to save the RTSS profile.\n\n" + ex.Message, "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
+                if (showError) MessageBox.Show(Loc.Get("ErrorRtssSave") + " " + profile + "\n\n" + ex.Message + "\n\n" + Loc.Format("ErrorReinstallHint", Loc.Get("MenuReinstallBridge")), "FrameShift", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return false;
             }
         }
@@ -437,7 +506,7 @@ namespace FrameShift
             var psi = new System.Diagnostics.ProcessStartInfo
             {
                 FileName = "schtasks.exe",
-                Arguments = "/Run /TN \"FrameShift RTSS Bridge\"",
+                Arguments = "/Run /TN \"" + BridgeSetup.TaskName + "\"",
                 UseShellExecute = false, CreateNoWindow = true,
                 RedirectStandardOutput = true, RedirectStandardError = true
             };

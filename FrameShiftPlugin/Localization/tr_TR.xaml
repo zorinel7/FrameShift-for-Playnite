@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Türkçe</sys:String>
+  <sys:String x:Key="FpsMode">FPS Modu</sys:String>
+  <sys:String x:Key="CurrentMode">Geçerli mod: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Geçerli mod: KAPALI</sys:String>
+  <sys:String x:Key="Active">AKTİF</sys:String>
+  <sys:String x:Key="Off">KAPALI</sys:String>
+  <sys:String x:Key="OffDisable">KAPALI — sınırı devre dışı bırak</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Şu anda seçili oyun bulunamadı.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Bu oyunun EXE dosyası belirlenemediği için RTSS profili oluşturulamıyor.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Profil için RTSS sınırı kaydedilemedi:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">"FrameShift RTSS Bridge" görevinin kurulu olduğundan emin olun.</sys:String>
+  <sys:String x:Key="ErrorGlobal">RTSS sınırı ayarlanamadı.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Uzantı klasöründen Install-FrameShift.cmd dosyasını bir kez yönetici olarak çalıştırın.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Geçersiz RTSS profil adı.</sys:String>
+  <sys:String x:Key="Game">Oyun</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Oyunlar → Düzenle → Oyun Eylemleri bölümünü açın ve Play action’ın EXE dosyasını gösterdiğinden emin olun.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe Playnite uzantı klasöründe bulunamadı.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge bir hata döndürdü:</sys:String>
+  <sys:String x:Key="InvalidFps">Geçersiz FPS değeri.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">RTSS köprüsünü yeniden yükle</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">RTSS köprüsünü kaldır</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift'in RTSS köprüsünü yüklemesi gerekiyor (her sürüm için bir kez).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows yönetici izni isteyecek.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">FrameShift RTSS köprüsü yüklenemedi.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Yüklü köprü doğrulanamadı.</sys:String>
+  <sys:String x:Key="BridgeRemoved">FrameShift RTSS köprüsü kaldırıldı.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">FrameShift RTSS köprüsü kaldırılamadı.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Yönetici izni verilmedi.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Köprü düzgün şekilde tamamlanmadı (kod: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Sorun devam ederse FrameShift menüsündeki "{0}" seçeneğini kullanın.</sys:String>
+</ResourceDictionary>

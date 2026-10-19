@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Esperanto</sys:String>
+  <sys:String x:Key="FpsMode">FPS-reĝimo</sys:String>
+  <sys:String x:Key="CurrentMode">Aktuala reĝimo: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Aktuala reĝimo: MALŜALTITA</sys:String>
+  <sys:String x:Key="Active">AKTIVA</sys:String>
+  <sys:String x:Key="Off">MALŜALTITA</sys:String>
+  <sys:String x:Key="OffDisable">MALŜALTITA — malŝalti limon</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Ne eblis trovi la nun elektitan ludon.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Ne eblis determini la EXE-dosieron de ĉi tiu ludo, do RTSS-profilo ne povas esti kreita.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Ne eblis konservi la RTSS-limon por la profilo:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Certigu, ke la tasko "FrameShift RTSS Bridge" estas instalita.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Ne eblis agordi la RTSS-limon.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Rulu Install-FrameShift.cmd unufoje kiel administranto el la dosierujo de la aldonaĵo.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Nevalida nomo de RTSS-profilo.</sys:String>
+  <sys:String x:Key="Game">Ludo</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Malfermu Ludoj → Redakti → Ludaj Agoj kaj certigu, ke Play action indikas la EXE-dosieron.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe mankas el la dosierujo de la Playnite-aldonaĵo.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge redonis eraron:</sys:String>
+  <sys:String x:Key="InvalidFps">Nevalida FPS-valoro.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Reinstali la RTSS-ponton</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Forigi la RTSS-ponton</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift devas instali sian RTSS-ponton (unufoje por ĉiu versio).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows petos administrantan permeson.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Ne eblis instali la RTSS-ponton de FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Ne eblis kontroli la instalitan ponton.</sys:String>
+  <sys:String x:Key="BridgeRemoved">La RTSS-ponto de FrameShift estis forigita.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Ne eblis forigi la RTSS-ponton de FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Administranta permeso ne estis donita.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">La ponto ne finiĝis ĝuste (kodo: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Se la problemo daŭras, uzu „{0}“ en la menuo de FrameShift.</sys:String>
+</ResourceDictionary>

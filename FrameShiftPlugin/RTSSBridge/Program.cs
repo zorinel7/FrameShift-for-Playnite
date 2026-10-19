@@ -42,10 +42,16 @@ namespace RTSSBridge
                 if (args.Length == 1 && string.Equals(args[0], "worker", StringComparison.OrdinalIgnoreCase))
                     return RunWorker();
 
+                if (args.Length == 1 && string.Equals(args[0], "install", StringComparison.OrdinalIgnoreCase))
+                    return Installer.Install();
+
+                if (args.Length == 1 && string.Equals(args[0], "uninstall", StringComparison.OrdinalIgnoreCase))
+                    return Installer.Uninstall();
+
                 if (args.Length == 3 && string.Equals(args[0], "setprofile", StringComparison.OrdinalIgnoreCase))
                 {
                     int fps;
-                    if (!int.TryParse(args[2], out fps) || !IsValidFps(fps) || string.IsNullOrWhiteSpace(args[1]))
+                    if (!int.TryParse(args[2], out fps) || !IsValidFps(fps) || !IsValidProfileName(args[1]))
                     {
                         Console.WriteLine("ERROR|usage=setprofile <App.exe> <0|30|40|60|120>");
                         return 2;
@@ -57,6 +63,11 @@ namespace RTSSBridge
 
                 if (args.Length == 2 && string.Equals(args[0], "getprofile", StringComparison.OrdinalIgnoreCase))
                 {
+                    if (!IsValidProfileName(args[1]))
+                    {
+                        Console.WriteLine("ERROR|invalid_profile=" + Sanitize(args[1]));
+                        return 2;
+                    }
                     Result result = GetProfileFps(args[1]);
                     Console.WriteLine(result.Text);
                     return result.Ok ? 0 : 3;
@@ -75,7 +86,7 @@ namespace RTSSBridge
                     return result.Ok ? 0 : 3;
                 }
 
-                Console.WriteLine("ERROR|usage=FrameShiftBridge.exe worker | setprofile <App.exe> <fps> | getprofile <App.exe>");
+                Console.WriteLine("ERROR|usage=FrameShiftBridge.exe worker | install | uninstall | setprofile <App.exe> <fps> | getprofile <App.exe>");
                 return 2;
             }
             catch (Exception ex)
@@ -86,6 +97,25 @@ namespace RTSSBridge
         }
 
         private static bool IsValidFps(int fps) => fps == 0 || fps == 30 || fps == 40 || fps == 60 || fps == 120;
+
+        // Same rules as FrameShiftPlugin.IsValidProfileName. The worker runs elevated and reads
+        // requests from a user-writable folder, so it must not trust the profile name it receives.
+        internal static bool IsValidProfileName(string profile)
+        {
+            return !string.IsNullOrWhiteSpace(profile) &&
+                   profile.Length <= 255 &&
+                   profile.EndsWith(".exe", StringComparison.OrdinalIgnoreCase) &&
+                   profile.IndexOfAny(Path.GetInvalidFileNameChars()) < 0 &&
+                   profile.IndexOf('|') < 0 && profile.IndexOf('"') < 0;
+        }
+
+        private static bool IsValidRequestId(string id)
+        {
+            if (id == null || id.Length != 32) return false;
+            foreach (char ch in id)
+                if (!Uri.IsHexDigit(ch)) return false;
+            return true;
+        }
 
         private static int RunWorker()
         {
@@ -102,9 +132,15 @@ namespace RTSSBridge
                 try { File.Delete(requestFile); } catch { }
 
                 string[] parts = request.Split(new[] { '|' }, 3);
-                if (parts.Length != 3)
+                if (parts.Length != 3 || !IsValidRequestId(parts[0]))
                 {
                     WriteResult(resultFile, "unknown", "ERROR|invalid_request");
+                    return 2;
+                }
+
+                if (!IsValidProfileName(parts[1]))
+                {
+                    WriteResult(resultFile, parts[0], "ERROR|invalid_profile=" + Sanitize(parts[1]));
                     return 2;
                 }
 

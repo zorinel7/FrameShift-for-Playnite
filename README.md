@@ -20,35 +20,30 @@
 - Remembers the selected FPS mode for each game
 - Supports games launched through **Steam, EA app, Epic Games, Ubisoft Connect** and other launchers
 - Ignores launcher processes when selecting the final game profile
-- Dedicated **FrameShift RTSS Bridge**
-- Controller-friendly Fullscreen integration
-- Automatic localization based on the language selected in Playnite
+- Dedicated **FrameShift RTSS Bridge**, installed automatically on first start (one UAC prompt, no scripts)
+- Controller-friendly Fullscreen integration (A selects, B closes the menu)
+- Automatic localization based on the language selected in Playnite (44 languages)
 
 ## 📦 Installation
 
 ### FrameShift plugin
 
-The GitHub Release provides the plugin as a **ZIP package**. Extract it manually because this release is not distributed as a `.pext` package.
+1. Download the latest `FrameShift_<version>.pext` from **Releases**.
+2. Open the `.pext` file with Playnite (double-click or drag it onto Playnite) and confirm the installation.
+3. Restart Playnite when asked.
+4. On the first start FrameShift asks to install its **RTSS bridge**. Confirm, then accept the Windows administrator (UAC) prompt.
 
-1. Close Playnite.
-2. Download the latest FrameShift ZIP from **Releases**.
-3. Extract the contents into:
+That's it — no scripts to run. The bridge is copied to `%ProgramFiles%\FrameShift\` and registered as the `FrameShift RTSS Bridge` scheduled task, so later FPS changes do not show UAC prompts. After a FrameShift update the bridge is refreshed the same way (one UAC prompt).
 
-```
-%AppData%\Playnite\Extensions\FrameShift\
-```
+Administrator rights are needed once because RTSS stores its profiles under `Program Files`.
 
-4. From the extracted FrameShift folder, run **`Install-FrameShift.cmd` as Administrator** (right-click -> **Run as administrator**). This installs/registers the FrameShift RTSS Bridge scheduled task. Administrator privileges are required for this step.
+**Removing FrameShift:** before uninstalling the add-on, use **Main menu → Extensions → FrameShift → Remove RTSS bridge**. Playnite only deletes the add-on folder, not the scheduled task.
 
-The folder should contain:
+<details>
+<summary>Manual ZIP installation (advanced)</summary>
 
-```
-FrameShift.dll
-FrameShiftBridge.exe
-extension.yaml
-```
-
-Do not leave an extra nested folder.
+Extract the package into `%AppData%\Playnite\Extensions\FrameShift\` (no nested folder) and either start Playnite (the bridge is installed on first start) or run `Install-FrameShift.cmd` as Administrator.
+</details>
 
 ### Toggle Fullscreen theme
 
@@ -103,7 +98,7 @@ For launcher-based games, FrameShift can use the actual game process started by 
 
 ## 🌍 Localization
 
-FrameShift follows the language selected in **Playnite**. The FrameShift interface and its Toggle integration use the corresponding Playnite language automatically.
+FrameShift follows the language selected in **Playnite** (read when Playnite starts). Unknown regional variants fall back to the same language (for example `es_MX` → `es_ES`), otherwise to English. Arabic, Persian and Hebrew use a right-to-left layout.
 
 Available localization codes:
 
@@ -111,7 +106,7 @@ Available localization codes:
 
 ## 🔌 RTSS Bridge
 
-FrameShift uses `FrameShiftBridge.exe` to communicate with RTSS and update the selected application's FPS limit.
+FrameShift uses `FrameShiftBridge.exe` (64-bit) to communicate with RTSS and update the selected application's FPS limit. Writing RTSS profiles needs administrator rights, so the bridge runs from `%ProgramFiles%\FrameShift\` through the `FrameShift RTSS Bridge` scheduled task. The plugin installs and updates it automatically; **Main menu → Extensions → FrameShift** offers **Reinstall RTSS bridge** and **Remove RTSS bridge**.
 
 ## 🧩 Toggle - Zorinel Fork
 
@@ -138,4 +133,4 @@ The fork preserves the original Toggle appearance and core behavior while adding
 
 Compiled builds are distributed through GitHub Releases.
 
-Current release: **FrameShift v1.0.0**
+Current release: **FrameShift v1.1.0** — see [CHANGELOG.md](CHANGELOG.md).

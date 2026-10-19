@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Magyar</sys:String>
+  <sys:String x:Key="FpsMode">FPS mód</sys:String>
+  <sys:String x:Key="CurrentMode">Jelenlegi mód: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Jelenlegi mód: KI</sys:String>
+  <sys:String x:Key="Active">AKTÍV</sys:String>
+  <sys:String x:Key="Off">KI</sys:String>
+  <sys:String x:Key="OffDisable">KI — korlát kikapcsolása</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">A jelenleg kiválasztott játék nem található.</sys:String>
+  <sys:String x:Key="ErrorNoExe">A játék EXE-fájlja nem határozható meg, ezért nem hozható létre RTSS-profil.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Nem sikerült menteni az RTSS-korlátot a profilhoz:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Győződjön meg róla, hogy a "FrameShift RTSS Bridge" feladat telepítve van.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Nem sikerült beállítani az RTSS-korlátot.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Futtassa egyszer rendszergazdaként az Install-FrameShift.cmd fájlt a bővítmény mappájából.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Érvénytelen RTSS-profilnév.</sys:String>
+  <sys:String x:Key="Game">Játék</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Nyisd meg a Játékok → Szerkesztés → Játékműveletek részt, és ellenőrizd, hogy a Play action az EXE-fájlra mutat.</sys:String>
+  <sys:String x:Key="NoBridge">A FrameShiftBridge.exe hiányzik a Playnite-bővítmény mappájából.</sys:String>
+  <sys:String x:Key="BridgeError">Az RTSSBridge hibát adott vissza:</sys:String>
+  <sys:String x:Key="InvalidFps">Érvénytelen FPS-érték.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">RTSS-híd újratelepítése</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">RTSS-híd eltávolítása</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">A FrameShiftnek telepítenie kell az RTSS-hidat (verziónként egyszer).</sys:String>
+  <sys:String x:Key="BridgeUacNote">A Windows rendszergazdai engedélyt fog kérni.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">A FrameShift RTSS-híd telepítése sikertelen.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">A telepített híd nem ellenőrizhető.</sys:String>
+  <sys:String x:Key="BridgeRemoved">A FrameShift RTSS-híd el lett távolítva.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">A FrameShift RTSS-híd eltávolítása sikertelen.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">A rendszergazdai engedély nem lett megadva.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">A híd nem fejeződött be megfelelően (kód: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Ha a probléma továbbra is fennáll, használd a FrameShift menü „{0}” pontját.</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Română</sys:String>
+  <sys:String x:Key="FpsMode">Mod FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Mod curent: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Mod curent: DEZACTIVAT</sys:String>
+  <sys:String x:Key="Active">ACTIV</sys:String>
+  <sys:String x:Key="Off">DEZACTIVAT</sys:String>
+  <sys:String x:Key="OffDisable">DEZACTIVAT — dezactivează limita</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Jocul selectat în acest moment nu a putut fi găsit.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Fișierul EXE al acestui joc nu a putut fi determinat, astfel încât profilul RTSS nu poate fi creat.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Limita RTSS nu a putut fi salvată pentru profilul:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Asigurați-vă că activitatea "FrameShift RTSS Bridge" este instalată.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Limita RTSS nu a putut fi setată.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Rulați o singură dată Install-FrameShift.cmd ca administrator din folderul extensiei.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Nume de profil RTSS invalid.</sys:String>
+  <sys:String x:Key="Game">Joc</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Deschide Jocuri → Editare → Acțiuni joc și verifică dacă Play action indică fișierul EXE.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe lipsește din folderul extensiei Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge a returnat o eroare:</sys:String>
+  <sys:String x:Key="InvalidFps">Valoare FPS invalidă.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Reinstalează puntea RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Elimină puntea RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift trebuie să își instaleze puntea RTSS (o dată pentru fiecare versiune).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows va cere permisiuni de administrator.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Puntea RTSS FrameShift nu a putut fi instalată.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Puntea instalată nu a putut fi verificată.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Puntea RTSS FrameShift a fost eliminată.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Puntea RTSS FrameShift nu a putut fi eliminată.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Permisiunea de administrator nu a fost acordată.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Puntea nu s-a încheiat corect (cod: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Dacă problema persistă, folosește „{0}” din meniul FrameShift.</sys:String>
+</ResourceDictionary>

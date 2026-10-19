@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">日本語</sys:String>
+  <sys:String x:Key="FpsMode">FPSモード</sys:String>
+  <sys:String x:Key="CurrentMode">現在のモード: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">現在のモード: オフ</sys:String>
+  <sys:String x:Key="Active">有効</sys:String>
+  <sys:String x:Key="Off">オフ</sys:String>
+  <sys:String x:Key="OffDisable">オフ — 上限を無効化</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">現在選択されているゲームが見つかりません。</sys:String>
+  <sys:String x:Key="ErrorNoExe">このゲームのEXEファイルを特定できないため、RTSSプロファイルを作成できません。</sys:String>
+  <sys:String x:Key="ErrorRtssSave">プロファイルのRTSS上限を保存できませんでした:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">"FrameShift RTSS Bridge" タスクがインストールされていることを確認してください。</sys:String>
+  <sys:String x:Key="ErrorGlobal">RTSS上限を設定できませんでした。</sys:String>
+  <sys:String x:Key="ErrorInstallHint">拡張機能フォルダーからInstall-FrameShift.cmdを管理者として一度実行してください。</sys:String>
+  <sys:String x:Key="InvalidProfileName">RTSSプロファイル名が無効です。</sys:String>
+  <sys:String x:Key="Game">ゲーム</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">ゲーム → 編集 → ゲームアクションを開き、Play action が EXE ファイルを指定していることを確認してください。</sys:String>
+  <sys:String x:Key="NoBridge">Playnite の拡張機能フォルダーに FrameShiftBridge.exe がありません。</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge がエラーを返しました:</sys:String>
+  <sys:String x:Key="InvalidFps">無効なFPS値です。</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">RTSS ブリッジを再インストール</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">RTSS ブリッジを削除</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift は RTSS ブリッジをインストールする必要があります（バージョンごとに 1 回）。</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows が管理者権限を求めます。</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">FrameShift の RTSS ブリッジをインストールできませんでした。</sys:String>
+  <sys:String x:Key="BridgeNotVerified">インストールされたブリッジを確認できませんでした。</sys:String>
+  <sys:String x:Key="BridgeRemoved">FrameShift の RTSS ブリッジを削除しました。</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">FrameShift の RTSS ブリッジを削除できませんでした。</sys:String>
+  <sys:String x:Key="BridgeUacDenied">管理者権限が許可されませんでした。</sys:String>
+  <sys:String x:Key="BridgeStepFailed">ブリッジが正常に終了しませんでした（コード: {0}）。</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">問題が続く場合は、FrameShift メニューの「{0}」を使用してください。</sys:String>
+</ResourceDictionary>

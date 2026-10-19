@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">मराठी</sys:String>
+  <sys:String x:Key="FpsMode">FPS मोड</sys:String>
+  <sys:String x:Key="CurrentMode">सध्याचा मोड: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">सध्याचा मोड: बंद</sys:String>
+  <sys:String x:Key="Active">सक्रिय</sys:String>
+  <sys:String x:Key="Off">बंद</sys:String>
+  <sys:String x:Key="OffDisable">बंद — मर्यादा अक्षम करा</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">सध्या निवडलेला गेम सापडला नाही.</sys:String>
+  <sys:String x:Key="ErrorNoExe">या गेमची EXE फाइल ओळखता आली नाही, त्यामुळे RTSS प्रोफाइल तयार करता येत नाही.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">प्रोफाइलसाठी RTSS मर्यादा जतन करता आली नाही:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">"FrameShift RTSS Bridge" टास्क स्थापित असल्याची खात्री करा.</sys:String>
+  <sys:String x:Key="ErrorGlobal">RTSS मर्यादा सेट करता आली नाही.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">एकदा विस्ताराच्या फोल्डरमधून Install-FrameShift.cmd प्रशासक म्हणून चालवा.</sys:String>
+  <sys:String x:Key="InvalidProfileName">अवैध RTSS प्रोफाइल नाव.</sys:String>
+  <sys:String x:Key="Game">गेम</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">गेम → संपादित करा → गेम अॅक्शन्स उघडा आणि Play action EXE फाइलकडे निर्देश करत असल्याची खात्री करा.</sys:String>
+  <sys:String x:Key="NoBridge">Playnite एक्स्टेंशन फोल्डरमध्ये FrameShiftBridge.exe सापडत नाही.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge ने त्रुटी परत केली:</sys:String>
+  <sys:String x:Key="InvalidFps">अवैध FPS मूल्य.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">RTSS ब्रिज पुन्हा स्थापित करा</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">RTSS ब्रिज काढा</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift ला त्याचा RTSS ब्रिज स्थापित करावा लागेल (प्रत्येक आवृत्तीसाठी एकदा).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows प्रशासक परवानगी मागेल.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">FrameShift RTSS ब्रिज स्थापित करता आला नाही.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">स्थापित ब्रिजची पडताळणी करता आली नाही.</sys:String>
+  <sys:String x:Key="BridgeRemoved">FrameShift RTSS ब्रिज काढला गेला.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">FrameShift RTSS ब्रिज काढता आला नाही.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">प्रशासक परवानगी दिली गेली नाही.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">ब्रिज योग्यरित्या पूर्ण झाला नाही (कोड: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">समस्या कायम राहिल्यास, FrameShift मेनूमधील "{0}" वापरा.</sys:String>
+</ResourceDictionary>

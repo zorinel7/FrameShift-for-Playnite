@@ -43,16 +43,28 @@ if not exist "RTSSBridge\bin\Release\FrameShiftBridge.exe" goto :fail
 
 copy /Y "RTSSBridge\bin\Release\FrameShiftBridge.exe" "..\bin\Release\FrameShiftBridge.exe" >nul || goto :fail
 copy /Y "extension.yaml" "..\bin\Release\extension.yaml" >nul || goto :fail
+copy /Y "icon.png" "..\bin\Release\icon.png" >nul || goto :fail
 copy /Y "INSTALL.md" "..\bin\Release\INSTALL.md" >nul || goto :fail
 copy /Y "Install-FrameShift.cmd" "..\bin\Release\Install-FrameShift.cmd" >nul || goto :fail
 copy /Y "Uninstall-FrameShift.cmd" "..\bin\Release\Uninstall-FrameShift.cmd" >nul || goto :fail
 copy /Y "Test-RTSS-Profile.cmd" "..\bin\Release\Test-RTSS-Profile.cmd" >nul || goto :fail
 
 echo.
+echo Packaging .pext...
+set "VERSION="
+for /f "tokens=2 delims=: " %%V in ('findstr /b /c:"Version:" extension.yaml') do set "VERSION=%%V"
+if not defined VERSION goto :fail
+set "PEXT=..\bin\FrameShift_%VERSION%.pext"
+if exist "%PEXT%" del /q "%PEXT%"
+rem A .pext is a ZIP of the extension folder; Compress-Archive only writes .zip, so rename afterwards.
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$ErrorActionPreference='Stop'; $d='..\bin\Release'; $files='FrameShift.dll','FrameShiftBridge.exe','extension.yaml','icon.png','INSTALL.md','Install-FrameShift.cmd','Uninstall-FrameShift.cmd','Test-RTSS-Profile.cmd' | ForEach-Object { Join-Path $d $_ }; Compress-Archive -Path $files -DestinationPath '..\bin\FrameShift.zip' -Force; Move-Item '..\bin\FrameShift.zip' '%PEXT%' -Force" || goto :fail
+
+echo.
 echo ========================================
 echo BUILD COMPLETED
 echo ========================================
 echo Output: ..\bin\Release
+echo Package: %PEXT%
 %PAUSE%
 exit /b 0
 

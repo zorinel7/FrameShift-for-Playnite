@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Suomi</sys:String>
+  <sys:String x:Key="FpsMode">FPS-tila</sys:String>
+  <sys:String x:Key="CurrentMode">Nykyinen tila: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Nykyinen tila: POIS</sys:String>
+  <sys:String x:Key="Active">AKTIIVINEN</sys:String>
+  <sys:String x:Key="Off">POIS</sys:String>
+  <sys:String x:Key="OffDisable">POIS — poista rajoitus</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Nykyistä valittua peliä ei löytynyt.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Pelin EXE-tiedostoa ei voitu määrittää, joten RTSS-profiilia ei voida luoda.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">RTSS-rajoituksen tallennus profiilille epäonnistui:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Varmista, että tehtävä "FrameShift RTSS Bridge" on asennettu.</sys:String>
+  <sys:String x:Key="ErrorGlobal">RTSS-rajoituksen asettaminen epäonnistui.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Suorita Install-FrameShift.cmd kerran järjestelmänvalvojana lisäosan kansiosta.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Virheellinen RTSS-profiilin nimi.</sys:String>
+  <sys:String x:Key="Game">Peli</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Avaa Pelit → Muokkaa → Pelin toiminnot ja varmista, että Play action osoittaa EXE-tiedostoon.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe puuttuu Playnite-lisäosan kansiosta.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge palautti virheen:</sys:String>
+  <sys:String x:Key="InvalidFps">Virheellinen FPS-arvo.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Asenna RTSS-silta uudelleen</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Poista RTSS-silta</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShiftin täytyy asentaa RTSS-siltansa (kerran versiota kohden).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows pyytää järjestelmänvalvojan oikeuksia.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">FrameShiftin RTSS-sillan asentaminen epäonnistui.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Asennettua siltaa ei voitu tarkistaa.</sys:String>
+  <sys:String x:Key="BridgeRemoved">FrameShiftin RTSS-silta poistettiin.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">FrameShiftin RTSS-sillan poistaminen epäonnistui.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Järjestelmänvalvojan oikeuksia ei myönnetty.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Silta ei päättynyt oikein (koodi: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Jos ongelma jatkuu, käytä FrameShift-valikon kohtaa ”{0}”.</sys:String>
+</ResourceDictionary>

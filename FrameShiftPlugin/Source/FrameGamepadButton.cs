@@ -25,6 +25,19 @@ namespace FrameShift
 
         private static bool IsPlayniteConfirmation(KeyEventArgs e)
         {
+            return IsPlayniteGesture(e, "ConfirmationBinding");
+        }
+
+        /// <summary>True for the controller button mapped to "back" in Playnite Fullscreen (B, or A with swapped buttons).</summary>
+        internal static bool IsPlayniteCancellation(KeyEventArgs e)
+        {
+            return IsPlayniteGesture(e, "CancellationBinding");
+        }
+
+        // Playnite delivers controller input as Playnite.Input.GameControllerInputEventArgs (a KeyEventArgs);
+        // the configured A/B bindings are static properties of Playnite.Input.GameControllerGesture.
+        private static bool IsPlayniteGesture(KeyEventArgs e, string bindingName)
+        {
             if (e == null)
                 return false;
 
@@ -47,7 +60,7 @@ namespace FrameShift
                     return false;
 
                 var confirmationProperty = gestureType.GetProperty(
-                    "ConfirmationBinding",
+                    bindingName,
                     BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
 
                 if (confirmationProperty == null)

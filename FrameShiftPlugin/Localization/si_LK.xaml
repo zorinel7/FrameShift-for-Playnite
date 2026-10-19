@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">සිංහල</sys:String>
+  <sys:String x:Key="FpsMode">FPS මාදිලිය</sys:String>
+  <sys:String x:Key="CurrentMode">වත්මන් මාදිලිය: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">වත්මන් මාදිලිය: අක්‍රියයි</sys:String>
+  <sys:String x:Key="Active">සක්‍රීයයි</sys:String>
+  <sys:String x:Key="Off">අක්‍රියයි</sys:String>
+  <sys:String x:Key="OffDisable">අක්‍රියයි — සීමාව අක්‍රීය කරන්න</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">දැනට තෝරා ඇති ක්‍රීඩාව සොයාගත නොහැකි විය.</sys:String>
+  <sys:String x:Key="ErrorNoExe">මෙම ක්‍රීඩාවේ EXE ගොනුව හඳුනාගත නොහැකි වූ බැවින් RTSS පැතිකඩක් නිර්මාණය කළ නොහැක.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">පැතිකඩ සඳහා RTSS සීමාව සුරැකිය නොහැකි විය:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">"FrameShift RTSS Bridge" කාර්යය ස්ථාපනය කර ඇති බව තහවුරු කරන්න.</sys:String>
+  <sys:String x:Key="ErrorGlobal">RTSS සීමාව සැකසිය නොහැකි විය.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">ප්ලගිනයේ ෆෝල්ඩරයෙන් Install-FrameShift.cmd ගොනුව පරිපාලක ලෙස එක් වරක් ධාවනය කරන්න.</sys:String>
+  <sys:String x:Key="InvalidProfileName">වලංගු නොවන RTSS පැතිකඩ නාමයක්.</sys:String>
+  <sys:String x:Key="Game">ක්‍රීඩාව</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">ක්‍රීඩා → සංස්කරණය → ක්‍රීඩා ක්‍රියා විවෘත කර Play action EXE ගොනුවට යොමු වන බව තහවුරු කරන්න.</sys:String>
+  <sys:String x:Key="NoBridge">Playnite ප්ලගිනයේ ෆෝල්ඩරයේ FrameShiftBridge.exe නොමැත.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge දෝෂයක් ලබා දුන්නේය:</sys:String>
+  <sys:String x:Key="InvalidFps">වලංගු නොවන FPS අගයක්.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">RTSS පාලම නැවත ස්ථාපනය කරන්න</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">RTSS පාලම ඉවත් කරන්න</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift හට එහි RTSS පාලම ස්ථාපනය කිරීමට අවශ්‍යයි (එක් අනුවාදයකට එක් වරක්).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows පරිපාලක අවසරය ඉල්ලනු ඇත.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">FrameShift RTSS පාලම ස්ථාපනය කළ නොහැකි විය.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">ස්ථාපිත පාලම තහවුරු කළ නොහැකි විය.</sys:String>
+  <sys:String x:Key="BridgeRemoved">FrameShift RTSS පාලම ඉවත් කරන ලදී.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">FrameShift RTSS පාලම ඉවත් කළ නොහැකි විය.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">පරිපාලක අවසරය ලබා නොදුනි.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">පාලම නිවැරදිව අවසන් නොවීය (කේතය: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">ගැටලුව දිගටම පවතී නම්, FrameShift මෙනුවේ "{0}" භාවිත කරන්න.</sys:String>
+</ResourceDictionary>

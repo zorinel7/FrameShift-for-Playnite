@@ -36,6 +36,6 @@ Use `build.cmd /nopause` for CI or scripted builds.
 
 ## Output
 
-The build produces `FrameShift.dll` and `FrameShiftBridge.exe`.
+The build produces `FrameShift.dll` and `FrameShiftBridge.exe` in `bin\Release`, and `build.cmd` packs them into `bin\FrameShift_<version>.pext` (version taken from `extension.yaml`).
 
 The plugin targets **.NET Framework 4.6.2** and uses WPF.

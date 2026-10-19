@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Tiếng Việt</sys:String>
+  <sys:String x:Key="FpsMode">Chế độ FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Chế độ hiện tại: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Chế độ hiện tại: TẮT</sys:String>
+  <sys:String x:Key="Active">ĐANG BẬT</sys:String>
+  <sys:String x:Key="Off">TẮT</sys:String>
+  <sys:String x:Key="OffDisable">TẮT — tắt giới hạn</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Không tìm thấy trò chơi đang được chọn.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Không thể xác định tệp EXE của trò chơi này nên không thể tạo hồ sơ RTSS.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Không thể lưu giới hạn RTSS cho hồ sơ:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Hãy đảm bảo tác vụ "FrameShift RTSS Bridge" đã được cài đặt.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Không thể đặt giới hạn RTSS.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Chạy Install-FrameShift.cmd một lần với quyền quản trị viên từ thư mục tiện ích mở rộng.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Tên hồ sơ RTSS không hợp lệ.</sys:String>
+  <sys:String x:Key="Game">Trò chơi</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Mở Trò chơi → Chỉnh sửa → Hành động trò chơi và đảm bảo Play action trỏ tới tệp EXE.</sys:String>
+  <sys:String x:Key="NoBridge">Không tìm thấy FrameShiftBridge.exe trong thư mục tiện ích mở rộng Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge trả về lỗi:</sys:String>
+  <sys:String x:Key="InvalidFps">Giá trị FPS không hợp lệ.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Cài đặt lại cầu nối RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Gỡ cầu nối RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift cần cài đặt cầu nối RTSS (một lần cho mỗi phiên bản).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows sẽ yêu cầu quyền quản trị viên.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Không thể cài đặt cầu nối RTSS của FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Không thể xác minh cầu nối đã cài đặt.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Đã gỡ cầu nối RTSS của FrameShift.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Không thể gỡ cầu nối RTSS của FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">Quyền quản trị viên không được cấp.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Cầu nối không kết thúc đúng cách (mã: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Nếu sự cố vẫn tiếp diễn, hãy dùng "{0}" trong menu FrameShift.</sys:String>
+</ResourceDictionary>

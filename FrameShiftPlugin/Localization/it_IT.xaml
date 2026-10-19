@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">Italiano</sys:String>
+  <sys:String x:Key="FpsMode">Modalità FPS</sys:String>
+  <sys:String x:Key="CurrentMode">Modalità attuale: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">Modalità attuale: DISATTIVATA</sys:String>
+  <sys:String x:Key="Active">ATTIVA</sys:String>
+  <sys:String x:Key="Off">DISATTIVATA</sys:String>
+  <sys:String x:Key="OffDisable">DISATTIVATA — disabilita limite</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">Impossibile trovare il gioco attualmente selezionato.</sys:String>
+  <sys:String x:Key="ErrorNoExe">Impossibile determinare il file EXE del gioco, quindi non è possibile creare il profilo RTSS.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">Impossibile salvare il limite RTSS per il profilo:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">Assicurati che l’attività "FrameShift RTSS Bridge" sia installata.</sys:String>
+  <sys:String x:Key="ErrorGlobal">Impossibile impostare il limite RTSS.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">Esegui una volta Install-FrameShift.cmd come amministratore dalla cartella dell’estensione.</sys:String>
+  <sys:String x:Key="InvalidProfileName">Nome del profilo RTSS non valido.</sys:String>
+  <sys:String x:Key="Game">Gioco</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">Apri Giochi → Modifica → Azioni gioco e assicurati che Play action punti al file EXE.</sys:String>
+  <sys:String x:Key="NoBridge">FrameShiftBridge.exe non è presente nella cartella dell’estensione di Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">RTSSBridge ha restituito un errore:</sys:String>
+  <sys:String x:Key="InvalidFps">Valore FPS non valido.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">Reinstalla il bridge RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">Rimuovi il bridge RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">FrameShift deve installare il suo bridge RTSS (una volta per versione).</sys:String>
+  <sys:String x:Key="BridgeUacNote">Windows chiederà l'autorizzazione di amministratore.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">Impossibile installare il bridge RTSS di FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">Impossibile verificare il bridge installato.</sys:String>
+  <sys:String x:Key="BridgeRemoved">Il bridge RTSS di FrameShift è stato rimosso.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">Impossibile rimuovere il bridge RTSS di FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">L'autorizzazione di amministratore non è stata concessa.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">Il bridge non è terminato correttamente (codice: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">Se il problema persiste, usa «{0}» nel menu FrameShift.</sys:String>
+</ResourceDictionary>

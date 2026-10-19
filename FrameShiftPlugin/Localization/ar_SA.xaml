@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="LanguageName">العربية</sys:String>
+  <sys:String x:Key="FpsMode">وضع FPS</sys:String>
+  <sys:String x:Key="CurrentMode">الوضع الحالي: {0} FPS</sys:String>
+  <sys:String x:Key="CurrentModeOff">الوضع الحالي: إيقاف</sys:String>
+  <sys:String x:Key="Active">نشط</sys:String>
+  <sys:String x:Key="Off">إيقاف</sys:String>
+  <sys:String x:Key="OffDisable">إيقاف — تعطيل الحد</sys:String>
+  <sys:String x:Key="ErrorGameNotFound">تعذر العثور على اللعبة المحددة حاليًا.</sys:String>
+  <sys:String x:Key="ErrorNoExe">تعذر تحديد ملف EXE الخاص بهذه اللعبة، لذلك لا يمكن إنشاء ملف تعريف RTSS.</sys:String>
+  <sys:String x:Key="ErrorRtssSave">تعذر حفظ حد RTSS للملف الشخصي:</sys:String>
+  <sys:String x:Key="ErrorBridgeInstall">تأكد من تثبيت مهمة "FrameShift RTSS Bridge".</sys:String>
+  <sys:String x:Key="ErrorGlobal">تعذر تعيين حد RTSS.</sys:String>
+  <sys:String x:Key="ErrorInstallHint">شغّل Install-FrameShift.cmd مرة واحدة كمسؤول من مجلد الإضافة.</sys:String>
+  <sys:String x:Key="InvalidProfileName">اسم ملف تعريف RTSS غير صالح.</sys:String>
+  <sys:String x:Key="Game">اللعبة</sys:String>
+  <sys:String x:Key="ErrorNoExeHint">افتح الألعاب ← تحرير ← إجراءات اللعبة وتأكد من أن إجراء التشغيل يشير إلى ملف EXE.</sys:String>
+  <sys:String x:Key="NoBridge">ملف FrameShiftBridge.exe غير موجود في مجلد إضافة Playnite.</sys:String>
+  <sys:String x:Key="BridgeError">أعاد RTSSBridge خطأً:</sys:String>
+  <sys:String x:Key="InvalidFps">قيمة FPS غير صالحة.</sys:String>
+  <sys:String x:Key="MenuReinstallBridge">إعادة تثبيت جسر RTSS</sys:String>
+  <sys:String x:Key="MenuRemoveBridge">إزالة جسر RTSS</sys:String>
+  <sys:String x:Key="BridgeInstallPrompt">يحتاج FrameShift إلى تثبيت جسر RTSS الخاص به (مرة واحدة لكل إصدار).</sys:String>
+  <sys:String x:Key="BridgeUacNote">سيطلب Windows إذن المسؤول.</sys:String>
+  <sys:String x:Key="BridgeInstallFailed">تعذّر تثبيت جسر RTSS الخاص بـ FrameShift.</sys:String>
+  <sys:String x:Key="BridgeNotVerified">تعذّر التحقق من الجسر المثبّت.</sys:String>
+  <sys:String x:Key="BridgeRemoved">تمت إزالة جسر RTSS الخاص بـ FrameShift.</sys:String>
+  <sys:String x:Key="BridgeRemoveFailed">تعذّرت إزالة جسر RTSS الخاص بـ FrameShift.</sys:String>
+  <sys:String x:Key="BridgeUacDenied">لم يتم منح إذن المسؤول.</sys:String>
+  <sys:String x:Key="BridgeStepFailed">لم ينتهِ الجسر بشكل صحيح (الرمز: {0}).</sys:String>
+  <sys:String x:Key="ErrorReinstallHint">إذا استمرت المشكلة، فاستخدم "{0}" في قائمة FrameShift.</sys:String>
+</ResourceDictionary>
