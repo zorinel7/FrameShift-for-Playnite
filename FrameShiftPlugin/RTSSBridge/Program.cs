@@ -302,8 +302,7 @@ namespace RTSSBridge
         private static string Sanitize(string value)
         {
             if (value == null) return "global";
-            return value.Replace("", " ").Replace("
-", " ").Replace("|", "/");
+            return value.Replace("\r", " ").Replace("\n", " ").Replace("|", "/");
         }
     }
 }

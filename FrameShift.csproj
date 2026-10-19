@@ -17,9 +17,14 @@
     <OutputPath Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">bin\Release\</OutputPath>
     <OutputPath Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">bin\Debug\</OutputPath>
   </PropertyGroup>
+  <!-- Playnite.SDK.dll lookup: /p:PlayniteSdkPath=..., then the repo root, then the local Playnite install. -->
+  <PropertyGroup>
+    <PlayniteSdkPath Condition="'$(PlayniteSdkPath)' == '' And Exists('$(MSBuildProjectDirectory)\Playnite.SDK.dll')">$(MSBuildProjectDirectory)\Playnite.SDK.dll</PlayniteSdkPath>
+    <PlayniteSdkPath Condition="'$(PlayniteSdkPath)' == '' And Exists('$(LOCALAPPDATA)\Playnite\Playnite.SDK.dll')">$(LOCALAPPDATA)\Playnite\Playnite.SDK.dll</PlayniteSdkPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Playnite.SDK">
-      <HintPath>Playnite.SDK.dll</HintPath>
+      <HintPath>$(PlayniteSdkPath)</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -37,9 +42,13 @@
     </Compile>
     <Page Include="FrameShiftPlugin\Source\FrameShiftControl.xaml" />
   </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="CheckPlayniteSdk" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="'$(PlayniteSdkPath)' == '' Or !Exists('$(PlayniteSdkPath)')" Text="Playnite.SDK.dll not found. Copy it to the repository root, install Playnite, or pass /p:PlayniteSdkPath=&lt;path&gt;." />
+  </Target>
+  <!-- Must come after the Microsoft.CSharp.targets import, otherwise the empty default AfterBuild overrides it. -->
   <Target Name="AfterBuild">
     <Copy SourceFiles="FrameShiftPlugin\extension.yaml" DestinationFolder="$(TargetDir)" />
     <Copy SourceFiles="FrameShiftPlugin\INSTALL.md" DestinationFolder="$(TargetDir)" />
   </Target>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

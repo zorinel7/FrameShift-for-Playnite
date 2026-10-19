@@ -10,6 +10,9 @@ obj/
 **/obj/
 *.pdb
 
+# Local Playnite SDK reference (see FrameShift.csproj)
+/Playnite.SDK.dll
+
 # OS
 Thumbs.db
 Desktop.ini

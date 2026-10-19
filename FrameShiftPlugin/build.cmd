@@ -3,6 +3,10 @@ setlocal EnableExtensions
 cd /d "%~dp0"
 chcp 65001 >nul
 
+rem Usage: build.cmd [/nopause]   (/nopause for CI and scripted builds)
+set "PAUSE=pause"
+if /i "%~1"=="/nopause" set "PAUSE=rem"
+
 echo ========================================
 echo        FrameShift - BUILD
 echo ========================================
@@ -18,7 +22,7 @@ if not defined MSBUILD if exist "%ProgramFiles(x86)%\Microsoft Visual Studio\Ins
 
 if not defined MSBUILD (
   echo ERROR: MSBuild not found.
-  pause
+  %PAUSE%
   exit /b 1
 )
 
@@ -42,13 +46,14 @@ copy /Y "extension.yaml" "..\bin\Release\extension.yaml" >nul || goto :fail
 copy /Y "INSTALL.md" "..\bin\Release\INSTALL.md" >nul || goto :fail
 copy /Y "Install-FrameShift.cmd" "..\bin\Release\Install-FrameShift.cmd" >nul || goto :fail
 copy /Y "Uninstall-FrameShift.cmd" "..\bin\Release\Uninstall-FrameShift.cmd" >nul || goto :fail
+copy /Y "Test-RTSS-Profile.cmd" "..\bin\Release\Test-RTSS-Profile.cmd" >nul || goto :fail
 
 echo.
 echo ========================================
 echo BUILD COMPLETED
 echo ========================================
 echo Output: ..\bin\Release
-pause
+%PAUSE%
 exit /b 0
 
 :fail
@@ -56,5 +61,5 @@ echo.
 echo ========================================
 echo BUILD FAILED
 echo ========================================
-pause
+%PAUSE%
 exit /b 1
