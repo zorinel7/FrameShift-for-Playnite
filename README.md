@@ -26,6 +26,26 @@
 - Controller-friendly Fullscreen integration (A selects, B closes the menu)
 - Automatic localization based on the language selected in Playnite (44 languages)
 
+## 📸 Screenshots
+
+### Fullscreen — any theme (game menu)
+
+Open a game, press **⋯** → **Extensions** → **FrameShift** and pick a limit. The active mode is marked with ✓.
+
+| ⋯ → Extensions → FrameShift | FPS options |
+|---|---|
+| ![FrameShift in the Fullscreen game menu](docs/screenshots/fullscreen-game-menu.webp) | ![FrameShift FPS submenu in Fullscreen](docs/screenshots/fullscreen-fps-submenu.webp) |
+
+### Fullscreen — Toggle theme (FrameShift button)
+
+| FrameShift button on the game details page | FPS menu |
+|---|---|
+| ![FrameShift button in the Toggle theme](docs/screenshots/toggle-frameshift-button.webp) | ![FrameShift FPS menu in the Toggle theme](docs/screenshots/toggle-fps-menu.webp) |
+
+### Desktop mode (game context menu)
+
+![FrameShift submenu in the Desktop game context menu](docs/screenshots/desktop-context-menu.png)
+
 ## 📦 Installation
 
 ### FrameShift plugin
