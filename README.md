@@ -2,6 +2,8 @@
 
 **Per-game FPS limiter for Playnite using RivaTuner Statistics Server (RTSS).**
 
+[![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/zorinel)
+
 > ## 🎮 Works with any Fullscreen theme
 > In **Playnite Fullscreen** you can set the limit with any theme: open a game, press the **⋯ (options)** button → **Extensions** → **FrameShift** → choose **30 / 40 / 60 / 120 FPS / OFF**.
 >
@@ -158,3 +160,11 @@ The fork preserves the original Toggle appearance and core behavior while adding
 Compiled builds are distributed through GitHub Releases.
 
 Current release: **FrameShift v1.1.1** — see [CHANGELOG.md](CHANGELOG.md).
+
+## ☕ Support
+
+FrameShift is free. If it makes your Playnite setup better and you'd like to support further development, you can buy me a coffee on Ko-fi:
+
+[![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/zorinel)
+
+https://ko-fi.com/zorinel
