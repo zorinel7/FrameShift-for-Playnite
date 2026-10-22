@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Administratorsko dopuštenje nije odobreno.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Most nije ispravno završio (kod: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Ako se problem nastavi, upotrijebite „{0}” u izborniku FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Prilagodi FPS načine…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS načini</sys:String>
+  <sys:String x:Key="ModesHint">Postavite četiri FPS načina prikazana u svakom FrameShift izborniku ({0}–{1} FPS). ISKLJUČENO je uvijek dostupno.</sys:String>
+  <sys:String x:Key="ModeLabel">Način {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Vrati zadano</sys:String>
+  <sys:String x:Key="Save">Spremi</sys:String>
+  <sys:String x:Key="Cancel">Odustani</sys:String>
+  <sys:String x:Key="InvalidModes">Svaki način mora biti drugačiji cijeli broj od {0} do {1} FPS.</sys:String>
 </ResourceDictionary>

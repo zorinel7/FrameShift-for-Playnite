@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Er zijn geen beheerdersrechten verleend.</sys:String>
   <sys:String x:Key="BridgeStepFailed">De bridge is niet correct afgesloten (code: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Als het probleem blijft, gebruik dan ‘{0}’ in het FrameShift-menu.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">FPS-modi aanpassen…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-modi</sys:String>
+  <sys:String x:Key="ModesHint">Stel de vier FPS-modi in die in elk FrameShift-menu worden getoond ({0}–{1} FPS). UIT is altijd beschikbaar.</sys:String>
+  <sys:String x:Key="ModeLabel">Modus {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Standaardwaarden herstellen</sys:String>
+  <sys:String x:Key="Save">Opslaan</sys:String>
+  <sys:String x:Key="Cancel">Annuleren</sys:String>
+  <sys:String x:Key="InvalidModes">Elke modus moet een ander geheel getal tussen {0} en {1} FPS zijn.</sys:String>
 </ResourceDictionary>

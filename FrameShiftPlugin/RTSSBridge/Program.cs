@@ -53,7 +53,7 @@ namespace RTSSBridge
                     int fps;
                     if (!int.TryParse(args[2], out fps) || !IsValidFps(fps) || !IsValidProfileName(args[1]))
                     {
-                        Console.WriteLine("ERROR|usage=setprofile <App.exe> <0|30|40|60|120>");
+                        Console.WriteLine("ERROR|usage=setprofile <App.exe> <0|" + MinFps + "-" + MaxFps + ">");
                         return 2;
                     }
                     Result result = SetProfileFps(args[1], fps);
@@ -96,7 +96,9 @@ namespace RTSSBridge
             }
         }
 
-        private static bool IsValidFps(int fps) => fps == 0 || fps == 30 || fps == 40 || fps == 60 || fps == 120;
+        // 0 = OFF, otherwise a user-defined FPS mode. Keep in sync with FpsModeRules (MinFps / MaxFps) in the plugin.
+        private const int MinFps = 10, MaxFps = 500;
+        private static bool IsValidFps(int fps) => fps == 0 || (fps >= MinFps && fps <= MaxFps);
 
         // Same rules as FrameShiftPlugin.IsValidProfileName. The worker runs elevated and reads
         // requests from a user-writable folder, so it must not trust the profile name it receives.

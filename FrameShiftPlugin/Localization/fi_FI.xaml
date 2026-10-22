@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Järjestelmänvalvojan oikeuksia ei myönnetty.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Silta ei päättynyt oikein (koodi: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Jos ongelma jatkuu, käytä FrameShift-valikon kohtaa ”{0}”.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Mukauta FPS-tiloja…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-tilat</sys:String>
+  <sys:String x:Key="ModesHint">Aseta neljä FPS-tilaa, jotka näkyvät jokaisessa FrameShift-valikossa ({0}–{1} FPS). POIS on aina käytettävissä.</sys:String>
+  <sys:String x:Key="ModeLabel">Tila {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Palauta oletukset</sys:String>
+  <sys:String x:Key="Save">Tallenna</sys:String>
+  <sys:String x:Key="Cancel">Peruuta</sys:String>
+  <sys:String x:Key="InvalidModes">Jokaisen tilan on oltava eri kokonaisluku väliltä {0}–{1} FPS.</sys:String>
 </ResourceDictionary>

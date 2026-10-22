@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">הרשאת מנהל לא ניתנה.</sys:String>
   <sys:String x:Key="BridgeStepFailed">הגשר לא הסתיים כראוי (קוד: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">אם הבעיה נמשכת, השתמשו ב"{0}" בתפריט FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">התאמת מצבי FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">מצבי FPS</sys:String>
+  <sys:String x:Key="ModesHint">הגדירו את ארבעת מצבי ה-FPS שמוצגים בכל תפריט של FrameShift ({0}–{1} FPS). כבוי זמין תמיד.</sys:String>
+  <sys:String x:Key="ModeLabel">מצב {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">שחזור ברירות מחדל</sys:String>
+  <sys:String x:Key="Save">שמירה</sys:String>
+  <sys:String x:Key="Cancel">ביטול</sys:String>
+  <sys:String x:Key="InvalidModes">כל מצב חייב להיות מספר שלם שונה בין {0} ל-{1} FPS.</sys:String>
 </ResourceDictionary>

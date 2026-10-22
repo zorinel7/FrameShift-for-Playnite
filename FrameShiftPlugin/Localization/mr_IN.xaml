@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">प्रशासक परवानगी दिली गेली नाही.</sys:String>
   <sys:String x:Key="BridgeStepFailed">ब्रिज योग्यरित्या पूर्ण झाला नाही (कोड: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">समस्या कायम राहिल्यास, FrameShift मेनूमधील "{0}" वापरा.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">FPS मोड सानुकूलित करा…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS मोड</sys:String>
+  <sys:String x:Key="ModesHint">प्रत्येक FrameShift मेनूमध्ये दिसणारे चार FPS मोड सेट करा ({0}–{1} FPS). बंद नेहमी उपलब्ध असते.</sys:String>
+  <sys:String x:Key="ModeLabel">मोड {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">डीफॉल्ट पुनर्संचयित करा</sys:String>
+  <sys:String x:Key="Save">जतन करा</sys:String>
+  <sys:String x:Key="Cancel">रद्द करा</sys:String>
+  <sys:String x:Key="InvalidModes">प्रत्येक मोड {0} ते {1} FPS दरम्यान वेगळी पूर्णांक संख्या असणे आवश्यक आहे.</sys:String>
 </ResourceDictionary>

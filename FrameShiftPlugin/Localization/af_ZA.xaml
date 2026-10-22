@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Administrateurtoestemming is nie verleen nie.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Die brug het nie korrek voltooi nie (kode: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">As die probleem voortduur, gebruik "{0}" in die FrameShift-kieslys.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Pas FPS-modusse aan…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-modusse</sys:String>
+  <sys:String x:Key="ModesHint">Stel die vier FPS-modusse in wat in elke FrameShift-kieslys gewys word ({0}–{1} FPS). AF is altyd beskikbaar.</sys:String>
+  <sys:String x:Key="ModeLabel">Modus {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Herstel verstekwaardes</sys:String>
+  <sys:String x:Key="Save">Stoor</sys:String>
+  <sys:String x:Key="Cancel">Kanselleer</sys:String>
+  <sys:String x:Key="InvalidModes">Elke modus moet 'n ander heelgetal van {0} tot {1} FPS wees.</sys:String>
 </ResourceDictionary>

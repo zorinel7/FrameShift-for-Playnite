@@ -1,7 +1,7 @@
 Id: FrameShift_Playnite_Plugin
 Name: FrameShift
 Author: zorinel
-Version: 1.1.1
+Version: 1.2.0
 Module: FrameShift.dll
 Type: GenericPlugin
 Icon: icon.png

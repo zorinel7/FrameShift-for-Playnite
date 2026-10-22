@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">اجازه مدیر داده نشد.</sys:String>
   <sys:String x:Key="BridgeStepFailed">پل به‌درستی به پایان نرسید (کد: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">اگر مشکل ادامه داشت، از «{0}» در منوی FrameShift استفاده کنید.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">سفارشی‌سازی حالت‌های FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">حالت‌های FPS</sys:String>
+  <sys:String x:Key="ModesHint">چهار حالت FPS را که در هر منوی FrameShift نمایش داده می‌شوند تنظیم کنید ({0}–{1} FPS). گزینهٔ خاموش همیشه در دسترس است.</sys:String>
+  <sys:String x:Key="ModeLabel">حالت {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">بازگردانی پیش‌فرض‌ها</sys:String>
+  <sys:String x:Key="Save">ذخیره</sys:String>
+  <sys:String x:Key="Cancel">لغو</sys:String>
+  <sys:String x:Key="InvalidModes">هر حالت باید عدد صحیح متفاوتی از {0} تا {1} FPS باشد.</sys:String>
 </ResourceDictionary>

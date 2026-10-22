@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Administranta permeso ne estis donita.</sys:String>
   <sys:String x:Key="BridgeStepFailed">La ponto ne finiĝis ĝuste (kodo: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Se la problemo daŭras, uzu „{0}“ en la menuo de FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Agordi FPS-reĝimojn…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-reĝimoj</sys:String>
+  <sys:String x:Key="ModesHint">Agordu la kvar FPS-reĝimojn montratajn en ĉiu menuo de FrameShift ({0}–{1} FPS). MALŜALTITA ĉiam disponeblas.</sys:String>
+  <sys:String x:Key="ModeLabel">Reĝimo {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Restarigi la defaŭltojn</sys:String>
+  <sys:String x:Key="Save">Konservi</sys:String>
+  <sys:String x:Key="Cancel">Nuligi</sys:String>
+  <sys:String x:Key="InvalidModes">Ĉiu reĝimo devas esti malsama entjero de {0} ĝis {1} FPS.</sys:String>
 </ResourceDictionary>

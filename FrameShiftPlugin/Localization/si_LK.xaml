@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">පරිපාලක අවසරය ලබා නොදුනි.</sys:String>
   <sys:String x:Key="BridgeStepFailed">පාලම නිවැරදිව අවසන් නොවීය (කේතය: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">ගැටලුව දිගටම පවතී නම්, FrameShift මෙනුවේ "{0}" භාවිත කරන්න.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">FPS ප්‍රකාර අභිරුචිකරණය කරන්න…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS ප්‍රකාර</sys:String>
+  <sys:String x:Key="ModesHint">සෑම FrameShift මෙනුවකම පෙන්වන FPS ප්‍රකාර හතර සකසන්න ({0}–{1} FPS). අක්‍රියයි සැමවිටම ලබා ගත හැක.</sys:String>
+  <sys:String x:Key="ModeLabel">ප්‍රකාරය {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">පෙරනිමි ප්‍රතිසාධනය කරන්න</sys:String>
+  <sys:String x:Key="Save">සුරකින්න</sys:String>
+  <sys:String x:Key="Cancel">අවලංගු කරන්න</sys:String>
+  <sys:String x:Key="InvalidModes">සෑම ප්‍රකාරයක්ම {0} සිට {1} FPS දක්වා වෙනස් පූර්ණ සංඛ්‍යාවක් විය යුතුය.</sys:String>
 </ResourceDictionary>

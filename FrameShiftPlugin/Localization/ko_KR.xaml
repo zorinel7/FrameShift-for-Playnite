@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">관리자 권한이 부여되지 않았습니다.</sys:String>
   <sys:String x:Key="BridgeStepFailed">브리지가 정상적으로 종료되지 않았습니다(코드: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">문제가 계속되면 FrameShift 메뉴에서 '{0}'을(를) 사용하세요.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">FPS 모드 사용자 지정…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS 모드</sys:String>
+  <sys:String x:Key="ModesHint">모든 FrameShift 메뉴에 표시되는 FPS 모드 4개를 설정합니다({0}–{1} FPS). 끄기는 항상 사용할 수 있습니다.</sys:String>
+  <sys:String x:Key="ModeLabel">모드 {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">기본값 복원</sys:String>
+  <sys:String x:Key="Save">저장</sys:String>
+  <sys:String x:Key="Cancel">취소</sys:String>
+  <sys:String x:Key="InvalidModes">각 모드는 {0}–{1} FPS 사이의 서로 다른 정수여야 합니다.</sys:String>
 </ResourceDictionary>

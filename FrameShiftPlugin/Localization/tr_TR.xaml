@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Yönetici izni verilmedi.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Köprü düzgün şekilde tamamlanmadı (kod: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Sorun devam ederse FrameShift menüsündeki "{0}" seçeneğini kullanın.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">FPS modlarını özelleştir…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS modları</sys:String>
+  <sys:String x:Key="ModesHint">Her FrameShift menüsünde gösterilen dört FPS modunu ayarlayın ({0}–{1} FPS). KAPALI her zaman kullanılabilir.</sys:String>
+  <sys:String x:Key="ModeLabel">Mod {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Varsayılanları geri yükle</sys:String>
+  <sys:String x:Key="Save">Kaydet</sys:String>
+  <sys:String x:Key="Cancel">İptal</sys:String>
+  <sys:String x:Key="InvalidModes">Her mod, {0} ile {1} FPS arasında farklı bir tam sayı olmalıdır.</sys:String>
 </ResourceDictionary>

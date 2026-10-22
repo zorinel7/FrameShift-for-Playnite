@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Quyền quản trị viên không được cấp.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Cầu nối không kết thúc đúng cách (mã: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Nếu sự cố vẫn tiếp diễn, hãy dùng "{0}" trong menu FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Tùy chỉnh chế độ FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">Chế độ FPS</sys:String>
+  <sys:String x:Key="ModesHint">Đặt bốn chế độ FPS hiển thị trong mọi menu FrameShift ({0}–{1} FPS). TẮT luôn có sẵn.</sys:String>
+  <sys:String x:Key="ModeLabel">Chế độ {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Khôi phục mặc định</sys:String>
+  <sys:String x:Key="Save">Lưu</sys:String>
+  <sys:String x:Key="Cancel">Hủy</sys:String>
+  <sys:String x:Key="InvalidModes">Mỗi chế độ phải là một số nguyên khác nhau từ {0} đến {1} FPS.</sys:String>
 </ResourceDictionary>

@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Permisiunea de administrator nu a fost acordată.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Puntea nu s-a încheiat corect (cod: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Dacă problema persistă, folosește „{0}” din meniul FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Personalizează modurile FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">Moduri FPS</sys:String>
+  <sys:String x:Key="ModesHint">Setează cele patru moduri FPS afișate în fiecare meniu FrameShift ({0}–{1} FPS). DEZACTIVAT este mereu disponibil.</sys:String>
+  <sys:String x:Key="ModeLabel">Modul {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Restabilește valorile implicite</sys:String>
+  <sys:String x:Key="Save">Salvează</sys:String>
+  <sys:String x:Key="Cancel">Anulează</sys:String>
+  <sys:String x:Key="InvalidModes">Fiecare mod trebuie să fie un număr întreg diferit între {0} și {1} FPS.</sys:String>
 </ResourceDictionary>

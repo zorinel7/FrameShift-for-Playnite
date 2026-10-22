@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Не беше дадено администраторско разрешение.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Мостът не завърши правилно (код: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Ако проблемът продължава, използвайте „{0}“ в менюто на FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Персонализиране на FPS режимите…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS режими</sys:String>
+  <sys:String x:Key="ModesHint">Задайте четирите FPS режима, показвани във всяко меню на FrameShift ({0}–{1} FPS). ИЗКЛ. е винаги налично.</sys:String>
+  <sys:String x:Key="ModeLabel">Режим {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Възстановяване на стандартните</sys:String>
+  <sys:String x:Key="Save">Запазване</sys:String>
+  <sys:String x:Key="Cancel">Отказ</sys:String>
+  <sys:String x:Key="InvalidModes">Всеки режим трябва да е различно цяло число от {0} до {1} FPS.</sys:String>
 </ResourceDictionary>

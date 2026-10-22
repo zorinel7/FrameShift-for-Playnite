@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Ni roddwyd caniatâd gweinyddwr.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Ni orffennodd y bont yn gywir (cod: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Os bydd y broblem yn parhau, defnyddiwch "{0}" yn newislen FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Addasu moddau FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">Moddau FPS</sys:String>
+  <sys:String x:Key="ModesHint">Gosodwch y pedwar modd FPS a ddangosir ym mhob dewislen FrameShift ({0}–{1} FPS). Mae I FF ar gael bob amser.</sys:String>
+  <sys:String x:Key="ModeLabel">Modd {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Adfer y rhagosodiadau</sys:String>
+  <sys:String x:Key="Save">Cadw</sys:String>
+  <sys:String x:Key="Cancel">Diddymu</sys:String>
+  <sys:String x:Key="InvalidModes">Rhaid i bob modd fod yn rhif cyfan gwahanol o {0} i {1} FPS.</sys:String>
 </ResourceDictionary>

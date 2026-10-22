@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Administratörsbehörighet beviljades inte.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Bryggan avslutades inte korrekt (kod: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Om problemet kvarstår, använd ”{0}” i FrameShift-menyn.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Anpassa FPS-lägen…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-lägen</sys:String>
+  <sys:String x:Key="ModesHint">Ange de fyra FPS-lägen som visas i alla FrameShift-menyer ({0}–{1} FPS). AV är alltid tillgängligt.</sys:String>
+  <sys:String x:Key="ModeLabel">Läge {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Återställ standard</sys:String>
+  <sys:String x:Key="Save">Spara</sys:String>
+  <sys:String x:Key="Cancel">Avbryt</sys:String>
+  <sys:String x:Key="InvalidModes">Varje läge måste vara ett annat heltal från {0} till {1} FPS.</sys:String>
 </ResourceDictionary>

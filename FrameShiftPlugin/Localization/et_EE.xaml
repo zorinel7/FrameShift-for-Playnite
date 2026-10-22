@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Administraatori õigusi ei antud.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Sild ei lõpetanud korrektselt (kood: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Kui probleem püsib, kasuta FrameShifti menüüs valikut „{0}”.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Kohanda FPS-režiime…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-režiimid</sys:String>
+  <sys:String x:Key="ModesHint">Määra neli FPS-režiimi, mida näidatakse igas FrameShifti menüüs ({0}–{1} FPS). VÄLJAS on alati saadaval.</sys:String>
+  <sys:String x:Key="ModeLabel">Režiim {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Taasta vaikeväärtused</sys:String>
+  <sys:String x:Key="Save">Salvesta</sys:String>
+  <sys:String x:Key="Cancel">Tühista</sys:String>
+  <sys:String x:Key="InvalidModes">Iga režiim peab olema erinev täisarv vahemikus {0}–{1} FPS.</sys:String>
 </ResourceDictionary>

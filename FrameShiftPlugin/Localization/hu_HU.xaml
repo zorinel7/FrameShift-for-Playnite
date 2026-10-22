@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">A rendszergazdai engedély nem lett megadva.</sys:String>
   <sys:String x:Key="BridgeStepFailed">A híd nem fejeződött be megfelelően (kód: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Ha a probléma továbbra is fennáll, használd a FrameShift menü „{0}” pontját.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">FPS-módok testreszabása…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-módok</sys:String>
+  <sys:String x:Key="ModesHint">Add meg a négy FPS-módot, amely minden FrameShift menüben megjelenik ({0}–{1} FPS). A KI mindig elérhető.</sys:String>
+  <sys:String x:Key="ModeLabel">{0}. mód</sys:String>
+  <sys:String x:Key="RestoreDefaults">Alapértelmezések visszaállítása</sys:String>
+  <sys:String x:Key="Save">Mentés</sys:String>
+  <sys:String x:Key="Cancel">Mégse</sys:String>
+  <sys:String x:Key="InvalidModes">Minden módnak különböző egész számnak kell lennie {0} és {1} FPS között.</sys:String>
 </ResourceDictionary>

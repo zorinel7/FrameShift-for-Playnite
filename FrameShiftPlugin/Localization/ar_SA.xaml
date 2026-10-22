@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">لم يتم منح إذن المسؤول.</sys:String>
   <sys:String x:Key="BridgeStepFailed">لم ينتهِ الجسر بشكل صحيح (الرمز: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">إذا استمرت المشكلة، فاستخدم "{0}" في قائمة FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">تخصيص أوضاع FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">أوضاع FPS</sys:String>
+  <sys:String x:Key="ModesHint">اضبط أوضاع FPS الأربعة المعروضة في كل قائمة من قوائم FrameShift ({0}–{1} FPS). خيار إيقاف متاح دائمًا.</sys:String>
+  <sys:String x:Key="ModeLabel">الوضع {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">استعادة الإعدادات الافتراضية</sys:String>
+  <sys:String x:Key="Save">حفظ</sys:String>
+  <sys:String x:Key="Cancel">إلغاء</sys:String>
+  <sys:String x:Key="InvalidModes">يجب أن يكون كل وضع عددًا صحيحًا مختلفًا من {0} إلى {1} FPS.</sys:String>
 </ResourceDictionary>

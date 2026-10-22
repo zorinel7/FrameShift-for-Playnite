@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">未授予管理员权限。</sys:String>
   <sys:String x:Key="BridgeStepFailed">桥接程序未正确完成（代码：{0}）。</sys:String>
   <sys:String x:Key="ErrorReinstallHint">如果问题仍然存在，请使用 FrameShift 菜单中的“{0}”。</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">自定义 FPS 模式…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS 模式</sys:String>
+  <sys:String x:Key="ModesHint">设置在每个 FrameShift 菜单中显示的四种 FPS 模式（{0}–{1} FPS）。关闭始终可用。</sys:String>
+  <sys:String x:Key="ModeLabel">模式 {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">恢复默认值</sys:String>
+  <sys:String x:Key="Save">保存</sys:String>
+  <sys:String x:Key="Cancel">取消</sys:String>
+  <sys:String x:Key="InvalidModes">每种模式必须是 {0} 到 {1} FPS 之间互不相同的整数。</sys:String>
 </ResourceDictionary>

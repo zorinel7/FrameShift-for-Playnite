@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Δεν δόθηκε άδεια διαχειριστή.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Η γέφυρα δεν ολοκληρώθηκε σωστά (κωδικός: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Αν το πρόβλημα παραμένει, χρησιμοποιήστε το «{0}» στο μενού του FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Προσαρμογή λειτουργιών FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">Λειτουργίες FPS</sys:String>
+  <sys:String x:Key="ModesHint">Ορίστε τις τέσσερις λειτουργίες FPS που εμφανίζονται σε κάθε μενού του FrameShift ({0}–{1} FPS). Το ΑΠΕΝΕΡΓΟ είναι πάντα διαθέσιμο.</sys:String>
+  <sys:String x:Key="ModeLabel">Λειτουργία {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Επαναφορά προεπιλογών</sys:String>
+  <sys:String x:Key="Save">Αποθήκευση</sys:String>
+  <sys:String x:Key="Cancel">Άκυρο</sys:String>
+  <sys:String x:Key="InvalidModes">Κάθε λειτουργία πρέπει να είναι διαφορετικός ακέραιος αριθμός από {0} έως {1} FPS.</sys:String>
 </ResourceDictionary>

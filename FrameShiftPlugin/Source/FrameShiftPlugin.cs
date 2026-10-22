@@ -17,6 +17,9 @@ namespace FrameShift
     {
         public Dictionary<string, int> GameFps { get; set; } = new Dictionary<string, int>();
         public Dictionary<string, string> GameProfiles { get; set; } = new Dictionary<string, string>();
+        // No initializer: the JSON deserializer would append saved values to a pre-filled list.
+        // NormalizeSettings fills the defaults (30 / 40 / 60 / 120).
+        public List<int> FpsModes { get; set; }
         [NonSerialized] private FrameShiftPlugin plugin;
 
         public FpsSettings() { }
@@ -52,13 +55,14 @@ namespace FrameShift
         {
             Settings = LoadPluginSettings<FpsSettings>() ?? new FpsSettings();
             NormalizeSettings();
-            return new FpsSettings(this) { GameFps = Settings.GameFps, GameProfiles = Settings.GameProfiles };
+            return new FpsSettings(this) { GameFps = Settings.GameFps, GameProfiles = Settings.GameProfiles, FpsModes = Settings.FpsModes };
         }
 
         private void NormalizeSettings()
         {
             if (Settings.GameFps == null) Settings.GameFps = new Dictionary<string, int>();
             if (Settings.GameProfiles == null) Settings.GameProfiles = new Dictionary<string, string>();
+            Settings.FpsModes = FpsModeRules.Normalize(Settings.FpsModes);
         }
 
         public override Control GetGameViewControl(GetGameViewControlArgs args)
@@ -82,6 +86,12 @@ namespace FrameShift
 
         public override IEnumerable<MainMenuItem> GetMainMenuItems(GetMainMenuItemsArgs args)
         {
+            // FPS modes are edited in Desktop mode only; Fullscreen just uses them.
+            if (PlayniteApi.ApplicationInfo.Mode == ApplicationMode.Desktop)
+            {
+                yield return new MainMenuItem { Description = Loc.Get("MenuCustomizeModes"), MenuSection = "@FrameShift", Action = _ => FpsModesEditor.Show(this) };
+                yield return new MainMenuItem { Description = "-", MenuSection = "@FrameShift" };
+            }
             yield return new MainMenuItem { Description = Loc.Get("MenuReinstallBridge"), MenuSection = "@FrameShift", Action = _ => ReinstallBridge() };
             yield return new MainMenuItem { Description = Loc.Get("MenuRemoveBridge"), MenuSection = "@FrameShift", Action = _ => RemoveBridge() };
         }
@@ -133,20 +143,35 @@ namespace FrameShift
             else PlayniteApi.Dialogs.ShowErrorMessage(Loc.Get("BridgeRemoveFailed") + "\n\n" + error, "FrameShift");
         }
 
-        // Game menu → FrameShift → 30 / 40 / 60 / 120 FPS / OFF. Works in Desktop mode and in Fullscreen
+        // Game menu → FrameShift → the four FPS modes / OFF. Works in Desktop mode and in Fullscreen
         // with any theme (Fullscreen lists it under the game's Extensions menu), so no custom theme is needed.
         public override IEnumerable<GameMenuItem> GetGameMenuItems(GetGameMenuItemsArgs args)
         {
             if (args.Games == null || args.Games.Count != 1) yield break;
             var game = args.Games[0];
             int current = GetGameFps(game);
-            foreach (var fps in new[] { 30, 40, 60, 120, 0 })
+            foreach (var fps in GetMenuOptions(current))
             {
                 int selected = fps;
                 string label = fps > 0 ? fps + " FPS" : (current == 0 ? Loc.Get("Off") : Loc.Get("OffDisable"));
                 if (fps == current) label = "✓  " + label + "  —  " + Loc.Get("Active");
                 yield return new GameMenuItem { Description = label, MenuSection = "FrameShift", Action = _ => ApplyFps(game, selected) };
             }
+        }
+
+        /// <summary>FPS modes (+ the current limit if it is no longer a mode) and OFF, for every FPS menu.</summary>
+        public List<int> GetMenuOptions(int current)
+        {
+            return FpsModeRules.MenuOptions(Settings.FpsModes, current);
+        }
+
+        public List<int> GetFpsModes() { return FpsModeRules.Normalize(Settings.FpsModes); }
+
+        public void SaveFpsModes(IList<int> modes)
+        {
+            Settings.FpsModes = FpsModeRules.Normalize(modes);
+            SavePluginSettings(Settings);
+            logger.Info("FrameShift: FPS modes = " + string.Join(", ", Settings.FpsModes));
         }
 
         private void ApplyFps(Game game, int fps)
@@ -498,7 +523,7 @@ namespace FrameShift
             }
         }
 
-        private bool IsValidFps(int fps) { return fps == 0 || fps == 30 || fps == 40 || fps == 60 || fps == 120; }
+        private bool IsValidFps(int fps) { return FpsModeRules.IsValidLimit(fps); }
 
         private string SendToElevatedBridge(string profile, int fps, int timeoutMs)
         {

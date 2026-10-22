@@ -41,6 +41,8 @@
     <Compile Include="FrameShiftPlugin\Source\FrameGamepadButton.cs" />
     <Compile Include="FrameShiftPlugin\Source\BridgeSetup.cs" />
     <Compile Include="FrameShiftPlugin\Source\Localization.cs" />
+    <Compile Include="FrameShiftPlugin\Source\FpsModes.cs" />
+    <Compile Include="FrameShiftPlugin\Source\FpsModesEditor.cs" />
     <EmbeddedResource Include="FrameShiftPlugin\Localization\*.xaml">
       <LogicalName>FrameShift.Localization.%(Filename).xaml</LogicalName>
     </EmbeddedResource>

@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Administratoriaus leidimas nesuteiktas.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Tiltas nebaigė darbo tinkamai (kodas: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Jei problema kartojasi, FrameShift meniu naudokite „{0}“.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Tinkinti FPS režimus…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS režimai</sys:String>
+  <sys:String x:Key="ModesHint">Nustatykite keturis FPS režimus, rodomus kiekviename FrameShift meniu ({0}–{1} FPS). IŠJUNGTA visada pasiekiama.</sys:String>
+  <sys:String x:Key="ModeLabel">Režimas {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Atkurti numatytuosius</sys:String>
+  <sys:String x:Key="Save">Įrašyti</sys:String>
+  <sys:String x:Key="Cancel">Atšaukti</sys:String>
+  <sys:String x:Key="InvalidModes">Kiekvienas režimas turi būti skirtingas sveikasis skaičius nuo {0} iki {1} FPS.</sys:String>
 </ResourceDictionary>

@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Izin administrator tidak diberikan.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Jembatan tidak selesai dengan benar (kode: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Jika masalah berlanjut, gunakan "{0}" di menu FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Sesuaikan mode FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">Mode FPS</sys:String>
+  <sys:String x:Key="ModesHint">Atur empat mode FPS yang ditampilkan di setiap menu FrameShift ({0}–{1} FPS). NONAKTIF selalu tersedia.</sys:String>
+  <sys:String x:Key="ModeLabel">Mode {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Pulihkan default</sys:String>
+  <sys:String x:Key="Save">Simpan</sys:String>
+  <sys:String x:Key="Cancel">Batal</sys:String>
+  <sys:String x:Key="InvalidModes">Setiap mode harus berupa bilangan bulat berbeda dari {0} hingga {1} FPS.</sys:String>
 </ResourceDictionary>

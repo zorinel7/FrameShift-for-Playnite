@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Oprávnění správce nebylo uděleno.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Most se neukončil správně (kód: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Pokud problém přetrvává, použijte v nabídce FrameShift položku „{0}“.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Přizpůsobit režimy FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">Režimy FPS</sys:String>
+  <sys:String x:Key="ModesHint">Nastavte čtyři režimy FPS zobrazené v každé nabídce FrameShift ({0}–{1} FPS). VYPNUTO je vždy k dispozici.</sys:String>
+  <sys:String x:Key="ModeLabel">Režim {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Obnovit výchozí</sys:String>
+  <sys:String x:Key="Save">Uložit</sys:String>
+  <sys:String x:Key="Cancel">Zrušit</sys:String>
+  <sys:String x:Key="InvalidModes">Každý režim musí být jiné celé číslo od {0} do {1} FPS.</sys:String>
 </ResourceDictionary>

@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Administratortillatelse ble ikke gitt.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Broen ble ikke avsluttet riktig (kode: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Hvis problemet vedvarer, bruk «{0}» i FrameShift-menyen.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Tilpass FPS-moduser…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-moduser</sys:String>
+  <sys:String x:Key="ModesHint">Angi de fire FPS-modusene som vises i alle FrameShift-menyer ({0}–{1} FPS). AV er alltid tilgjengelig.</sys:String>
+  <sys:String x:Key="ModeLabel">Modus {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Gjenopprett standarder</sys:String>
+  <sys:String x:Key="Save">Lagre</sys:String>
+  <sys:String x:Key="Cancel">Avbryt</sys:String>
+  <sys:String x:Key="InvalidModes">Hver modus må være et annet heltall fra {0} til {1} FPS.</sys:String>
 </ResourceDictionary>

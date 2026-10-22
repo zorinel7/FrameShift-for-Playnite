@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Дозвіл адміністратора не надано.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Міст завершився некоректно (код: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Якщо проблема повторюється, скористайтеся «{0}» у меню FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Налаштувати режими FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">Режими FPS</sys:String>
+  <sys:String x:Key="ModesHint">Задайте чотири режими FPS, які показуються в кожному меню FrameShift ({0}–{1} FPS). ВИМК. доступне завжди.</sys:String>
+  <sys:String x:Key="ModeLabel">Режим {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Відновити типові</sys:String>
+  <sys:String x:Key="Save">Зберегти</sys:String>
+  <sys:String x:Key="Cancel">Скасувати</sys:String>
+  <sys:String x:Key="InvalidModes">Кожен режим має бути іншим цілим числом від {0} до {1} FPS.</sys:String>
 </ResourceDictionary>

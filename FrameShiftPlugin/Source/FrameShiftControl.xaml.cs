@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -159,7 +160,7 @@ namespace FrameShift
                 Margin = new Thickness(0, 0, 0, 18)
             });
 
-            var options = new[] { 30, 40, 60, 120, 0 };
+            var options = plugin.GetMenuOptions(current).ToArray();
             buttons = new FrameGamepadButton[options.Length];
             for (var i = 0; i < options.Length; i++)
             {

@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Níor tugadh cead riarthóra.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Níor chríochnaigh an droichead i gceart (cód: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Má leanann an fhadhb ar aghaidh, úsáid "{0}" i roghchlár FrameShift.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">Saincheap móid FPS…</sys:String>
+  <sys:String x:Key="ModesTitle">Móid FPS</sys:String>
+  <sys:String x:Key="ModesHint">Socraigh na ceithre mhód FPS a thaispeántar i ngach roghchlár FrameShift ({0}–{1} FPS). Bíonn MÚCHTA ar fáil i gcónaí.</sys:String>
+  <sys:String x:Key="ModeLabel">Mód {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Athchóirigh na réamhshocruithe</sys:String>
+  <sys:String x:Key="Save">Sábháil</sys:String>
+  <sys:String x:Key="Cancel">Cealaigh</sys:String>
+  <sys:String x:Key="InvalidModes">Ní mór do gach mód a bheith ina shlánuimhir dhifriúil ó {0} go {1} FPS.</sys:String>
 </ResourceDictionary>

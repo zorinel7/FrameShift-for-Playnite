@@ -7,7 +7,7 @@ if "%~1"=="" (
   exit /b 1
 )
 if "%~2"=="" (
-  echo Podaj limit: 0, 30, 40, 60 albo 120.
+  echo Podaj limit: 0 (WYŁ.) albo od 10 do 500.
   exit /b 1
 )
 FrameShiftBridge.exe setprofile "%~1" %~2

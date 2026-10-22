@@ -5,7 +5,7 @@
 [![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/zorinel)
 
 > ## 🎮 Works with any Fullscreen theme
-> In **Playnite Fullscreen** you can set the limit with any theme: open a game, press the **⋯ (options)** button → **Extensions** → **FrameShift** → choose **30 / 40 / 60 / 120 FPS / OFF**.
+> In **Playnite Fullscreen** you can set the limit with any theme: open a game, press the **⋯ (options)** button → **Extensions** → **FrameShift** → choose one of your **four FPS modes** (default 30 / 40 / 60 / 120) or **OFF**.
 >
 > For a dedicated **FrameShift button** on the game details page, install **Toggle - Zorinel / FrameShift Fork** (optional).
 >
@@ -17,7 +17,7 @@
 
 ## 🎮 Features
 
-- **30 / 40 / 60 / 120 FPS / OFF**
+- **Four FPS modes + OFF** — default 30 / 40 / 60 / 120 FPS, customizable in Desktop Mode (10–500 FPS)
 - Per-game FPS limits
 - RTSS profile assigned to the correct game executable
 - Automatic game executable detection
@@ -90,11 +90,17 @@ A ZIP/manual installation is also available in the Toggle repository if required
 
 FrameShift also works in **Playnite Desktop Mode** and does not require the Toggle theme there.
 
-In Desktop Mode, select a single game, open its **game context menu** and choose **FrameShift** → **30, 40, 60, 120 FPS or OFF**. The active mode is marked with ✓.
+In Desktop Mode, select a single game, open its **game context menu** and choose **FrameShift** → one of the four FPS modes or **OFF**. The active mode is marked with ✓.
 
 The same **FrameShift** submenu is available in Fullscreen Mode under the game's **⋯ → Extensions** menu, with any theme.
 
 The selected FPS limit is stored for the game and applied to its RTSS profile. The same per-game settings are used in both Desktop Mode and Fullscreen Mode.
+
+### Customizing the FPS modes
+
+In Desktop Mode open **Main menu → Extensions → FrameShift → Customize FPS modes…** and enter four different limits between **10 and 500 FPS** (**Restore defaults** brings back 30 / 40 / 60 / 120). OFF is always available.
+
+The modes are used everywhere: the game menu in Desktop and Fullscreen (any theme) and the FrameShift button of the Toggle theme. They can only be edited in Desktop Mode. If a game still uses a limit that is no longer one of the modes, it stays listed with ✓ until you pick another one.
 
 ## 🔧 How it works
 
@@ -112,7 +118,7 @@ FramerateLimit
 
 For launcher-based games, FrameShift can use the actual game process started by Playnite instead of the launcher process.
 
-## 📋 FPS Profiles
+## 📋 Default FPS modes
 
 | Mode | Use |
 |---|---|
@@ -121,6 +127,8 @@ For launcher-based games, FrameShift can use the actual game process started by 
 | **60 FPS** | Standard gaming |
 | **120 FPS** | High-refresh gaming |
 | **OFF** | Disable the FPS limit |
+
+All four modes can be changed in Desktop Mode (see *Customizing the FPS modes*).
 
 ## 🌍 Localization
 
@@ -159,7 +167,7 @@ The fork preserves the original Toggle appearance and core behavior while adding
 
 Compiled builds are distributed through GitHub Releases.
 
-Current release: **FrameShift v1.1.1** — see [CHANGELOG.md](CHANGELOG.md).
+Current release: **FrameShift v1.2.0** — see [CHANGELOG.md](CHANGELOG.md).
 
 ## ☕ Support
 

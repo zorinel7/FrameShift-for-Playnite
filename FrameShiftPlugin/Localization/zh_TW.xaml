@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">未授予系統管理員權限。</sys:String>
   <sys:String x:Key="BridgeStepFailed">橋接程式未正確結束（代碼：{0}）。</sys:String>
   <sys:String x:Key="ErrorReinstallHint">如果問題持續發生，請使用 FrameShift 選單中的「{0}」。</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">自訂 FPS 模式…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS 模式</sys:String>
+  <sys:String x:Key="ModesHint">設定在每個 FrameShift 選單中顯示的四種 FPS 模式（{0}–{1} FPS）。關閉一律可用。</sys:String>
+  <sys:String x:Key="ModeLabel">模式 {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">還原預設值</sys:String>
+  <sys:String x:Key="Save">儲存</sys:String>
+  <sys:String x:Key="Cancel">取消</sys:String>
+  <sys:String x:Key="InvalidModes">每種模式都必須是 {0} 到 {1} FPS 之間互不相同的整數。</sys:String>
 </ResourceDictionary>

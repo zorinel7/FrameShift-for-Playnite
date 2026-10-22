@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">Administratorrechte wurden nicht erteilt.</sys:String>
   <sys:String x:Key="BridgeStepFailed">Die Bridge wurde nicht korrekt beendet (Code: {0}).</sys:String>
   <sys:String x:Key="ErrorReinstallHint">Wenn das Problem weiterhin besteht, verwende „{0}“ im FrameShift-Menü.</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">FPS-Modi anpassen…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS-Modi</sys:String>
+  <sys:String x:Key="ModesHint">Lege die vier FPS-Modi fest, die in jedem FrameShift-Menü angezeigt werden ({0}–{1} FPS). AUS ist immer verfügbar.</sys:String>
+  <sys:String x:Key="ModeLabel">Modus {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">Standard wiederherstellen</sys:String>
+  <sys:String x:Key="Save">Speichern</sys:String>
+  <sys:String x:Key="Cancel">Abbrechen</sys:String>
+  <sys:String x:Key="InvalidModes">Jeder Modus muss eine andere ganze Zahl von {0} bis {1} FPS sein.</sys:String>
 </ResourceDictionary>

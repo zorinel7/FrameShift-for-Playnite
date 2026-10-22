@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.0 (2026-10-22)
+
+### Added
+- **Customizable FPS modes.** Desktop Mode: **Main menu → Extensions → FrameShift → Customize FPS modes…** sets the four modes (10–500 FPS, all different; **Restore defaults** = 30 / 40 / 60 / 120). OFF is always available.
+- The modes are used in every FPS menu: the game menu in Desktop and in Fullscreen with any theme, and the Toggle theme's FrameShift button. Editing is Desktop-only; the menu item is hidden in Fullscreen.
+- A game whose limit is no longer one of the modes keeps it, and the menus still show it with ✓.
+- New texts translated into all 44 languages.
+
+### Changed
+- The RTSS bridge accepts 0 (OFF) or 10–500 FPS instead of the fixed 30 / 40 / 60 / 120 list. The bridge changes, so FrameShift asks once (UAC) to refresh it after the update.
+- Existing settings get the default modes 30 / 40 / 60 / 120; per-game limits are unchanged.
+
 ## 1.1.1 (2026-10-19, package updated 2026-10-20)
 
 ### Added

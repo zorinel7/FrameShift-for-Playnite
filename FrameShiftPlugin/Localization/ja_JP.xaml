@@ -30,4 +30,12 @@
   <sys:String x:Key="BridgeUacDenied">管理者権限が許可されませんでした。</sys:String>
   <sys:String x:Key="BridgeStepFailed">ブリッジが正常に終了しませんでした（コード: {0}）。</sys:String>
   <sys:String x:Key="ErrorReinstallHint">問題が続く場合は、FrameShift メニューの「{0}」を使用してください。</sys:String>
+  <sys:String x:Key="MenuCustomizeModes">FPS モードをカスタマイズ…</sys:String>
+  <sys:String x:Key="ModesTitle">FPS モード</sys:String>
+  <sys:String x:Key="ModesHint">すべての FrameShift メニューに表示される 4 つの FPS モードを設定します（{0}～{1} FPS）。オフは常に使用できます。</sys:String>
+  <sys:String x:Key="ModeLabel">モード {0}</sys:String>
+  <sys:String x:Key="RestoreDefaults">既定値に戻す</sys:String>
+  <sys:String x:Key="Save">保存</sys:String>
+  <sys:String x:Key="Cancel">キャンセル</sys:String>
+  <sys:String x:Key="InvalidModes">各モードは {0}～{1} FPS の異なる整数にしてください。</sys:String>
 </ResourceDictionary>
