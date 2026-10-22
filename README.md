@@ -48,6 +48,12 @@ Open a game, press **⋯** → **Extensions** → **FrameShift** and pick a limi
 
 ![FrameShift submenu in the Desktop game context menu](docs/screenshots/desktop-context-menu.png)
 
+### Desktop mode — customizing the FPS modes
+
+| Main menu → Extensions → FrameShift | Customize FPS modes |
+|---|---|
+| ![Customize FPS modes in the Desktop main menu](docs/screenshots/desktop-customize-fps-modes-menu.png) | ![FPS modes editor](docs/screenshots/fps-modes-editor.png) |
+
 ## 📦 Installation
 
 ### FrameShift plugin
@@ -98,7 +104,7 @@ The selected FPS limit is stored for the game and applied to its RTSS profile. T
 
 ### Customizing the FPS modes
 
-In Desktop Mode open **Main menu → Extensions → FrameShift → Customize FPS modes…** and enter four different limits between **10 and 500 FPS** (**Restore defaults** brings back 30 / 40 / 60 / 120). OFF is always available.
+In Desktop Mode open **Main menu → Extensions → FrameShift → Customize FPS modes…** and enter four different limits between **10 and 500 FPS** (**Restore defaults** brings back 30 / 40 / 60 / 120). OFF is always available. See the [screenshots](#-screenshots).
 
 The modes are used everywhere: the game menu in Desktop and Fullscreen (any theme) and the FrameShift button of the Toggle theme. They can only be edited in Desktop Mode. If a game still uses a limit that is no longer one of the modes, it stays listed with ✓ until you pick another one.
 
